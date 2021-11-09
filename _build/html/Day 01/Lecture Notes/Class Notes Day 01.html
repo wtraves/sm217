@@ -1,0 +1,689 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. Data Science for Decision Makers &#8212; SM217 Introduction to Data Science</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="1. Python Installation Instructions" href="../Python%20Installation%20-%20To%20Do%20Prior%20To%20Class/Python%20Installation%20Instructions%20-%20To%20do%20prior%20to%20class.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SM217 Introduction to Data Science</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   SM217: Introduction to Data Science
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Preamble
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Python%20Installation%20-%20To%20Do%20Prior%20To%20Class/Python%20Installation%20Instructions%20-%20To%20do%20prior%20to%20class.html">
+   1. Python Installation Instructions
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Second Part
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. Data Science for Decision Makers
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/Day 01/Lecture Notes/Class Notes Day 01.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FDay 01/Lecture Notes/Class Notes Day 01.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Day 01/Lecture Notes/Class Notes Day 01.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-is-data-science-so-popular-today">
+   2.1. Why is data science so popular today?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-details-about-this-class">
+   2.2. More details about this class
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview-of-course-topics">
+   2.3. Overview of course topics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#work-flow-in-this-course">
+   2.4. Work flow in this course
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#income-in-the-usa">
+   2.5. Income in the USA
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#install-the-datascience-package">
+     2.5.1. Install the Datascience Package
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summary-data">
+     2.5.2. Summary Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#percentiles">
+     2.5.3. Percentiles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#we-are-the-99">
+     2.5.4. We are the 99%
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#skewed-distributions">
+     2.5.5. Skewed distributions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="data-science-for-decision-makers">
+<h1><span class="section-number">2. </span>Data Science for Decision Makers<a class="headerlink" href="#data-science-for-decision-makers" title="Permalink to this headline">¶</a></h1>
+<p>Much of this course will focus on <strong>data analysis and the communication of insights obtained from data</strong>, key skills for military officers. The Navy’s Education for Seapower report makes a strong case for developing these skills at USNA:</p>
+<blockquote>
+<div><p>In the Cognitive Age, where leaders have to deal not only with incomplete data but also with analysis and decision making in a world that involves overwhelming data, the ability to evaluate information, reason strategically and ethically, and act decisively, will be essential elements of future success. These are skills that can be taught. These are talents that can be developed. The challenges and multi-disciplinary issues of our contemporary world can and should be specifically examined through our naval education programs. <a class="reference external" href="https://media.defense.gov/2020/May/18/2002302021/-1/-1/1/E4SFINALREPORT.PDF">Education for Seapower Final Report, page 11</a></p>
+</div></blockquote>
+<p>This course is a direct response to remarks by Vice Admiral Sean Buck, who encouraged USNA to develop a data science curriculum to make midshipmen more effective officers.</p>
+<p>The National Academies of Sciences, Engineering and Medicine introduce data science in the following way:</p>
+<blockquote>
+<div><p>Today, the term “data scientist” typically describes a knowledge worker who is principally
+occupied with analyzing complex and massive data resources. However, data science spans a broader
+array of activities that involve applying principles for data collection, storage, integration, analysis,
+inference, communication, and ethics. In future decades, all undergraduates will profit from a
+fundamental awareness of and competence in data science. <a class="reference external" href="https://www.nationalacademies.org/our-work/envisioning-the-data-science-discipline-the-undergraduate-perspective">NASEM report, page S1</a></p>
+</div></blockquote>
+<p>We’ll use a slightly modified list of data science tasks: <strong>data collection, storage, management, analysis, communication, and deployment</strong> span the <strong>data science life cycle</strong>.</p>
+<p>To illustrate the meaning of each task, consider one of the Navy’s current data science projects aimed at reducing maintenance costs on our F-18 fighter jets. Currently we perform maintenance on manufacturer-suggested schedules, but we might be able to align maintenance efforts to aircraft performance, saving money on unnecessary service and identifying needed repairs before our air crew is put at risk. The project <strong>collects</strong> performance data on the airplanes as well as data from the maintenance crews and parts supply chain.  Data from these various sources may be combined in a single database. The database is too massive to save on a single computer and must be <strong>stored</strong> in a data warehouse. Access to the data is strictly <strong>managed</strong>, so that only authorized users can see it. Data scientist <strong>analysis</strong> identifies patterns in the data: performance readings that signal a plane needs maintenance. The analysts <strong>communicate</strong> the results of the analysis to many different stakeholders, including senior Navy leadership, air bosses, and maintenance crews. Eventually, we will develop and <strong>deploy</strong> a computer application that tracks aircraft performance and suggests maintenance actions for planes in real-time. The data science project doesn’t end there; we would want to continue to collect and analyze data to ensure that the deployed system evolves as the performance of the jets changes.</p>
+<a class="reference internal image-reference" href="../../_images/f18_pic.jpg"><img alt="f18 jet" class="align-center" src="../../_images/f18_pic.jpg" style="width: 400px;" /></a>
+<center> An F/A-18E Super Hornet from the Tophatters of Strike Fighter Squadron (VFA) 14 flies past aircraft carrier USS John C. Stennis in April 2013. (US Navy/MC3 Ignacio D. Perez; picture appeared on the cover of the [2015 June-July issue of Air and Space magazine](https://www.airspacemag.com/military-aviation/about-f-18-photo-180955971/)) </center>
+<div class="section" id="why-is-data-science-so-popular-today">
+<h2><span class="section-number">2.1. </span>Why is data science so popular today?<a class="headerlink" href="#why-is-data-science-so-popular-today" title="Permalink to this headline">¶</a></h2>
+<p>Intense interest among commercial and government entities has led to massive investments in data science.  Many data science projects make significant use of probability and statistics, mathematical tools that help us understand and quantify uncertainty. These tools have been around for a long time but several recent developments are making data science more important and more effective than ever before.  Essentially there are three factors driving data science development: more available data, more powerful computers, and more sophisticated algorithms.</p>
+<ul class="simple">
+<li><p><strong>More data</strong>: Internet browsing requires the transmission of data about you and your past browsing history, giving rise to a lot of information about online behavior. Similarly, the internet of things (IoT) – internet enabled devices like smart doorbells and fitness trackers – produce massive amounts of data about our physical world. Economic data is carefully tracked and published; see the <a class="reference external" href="https://fred.stlouisfed.org/">FRED website</a> for data compiled by the St. Louis Federal Reserve bank. Demographic data is collected by the U.S. Census Bureau every ten years, but they also collect data about housing and jobs more frequently in the <a class="reference external" href="https://www.census.gov/programs-surveys/acs">American Community Survey</a>.  Many cities publish data about their operations, including information about crime and policing, taxes, and business activity. For example, check out Washington’s D.C.’s data on <a class="reference external" href="https://opendata.dc.gov/">Open Data DC</a>. The availability of large accessible datasets gave rise to the <strong>big data</strong> revolution, a precursor to the current data science craze.</p></li>
+<li><p><strong>More powerful computers</strong>: In the mid-1980’s statisticians developed simple statistical methods, replacing theoretically intensive statistical tests with large-scale computer simulations. These simulation methods have an additional advantage: they don’t require us to make hard-to-test assumptions about the way the data were generated. However, simulation requires a lot of computation. Too much computation for the personal computers of the Reagan era. But computer processing speeds have grown according to Moore’s law: doubling every two years. This exponential growth in processing power led to today’s laptop computers, machines with enough processing power to manipulate large datasets in the blink of an eye. More powerful computers helped make data science possible.</p></li>
+<li><p><strong>More sophisticated algorithms</strong>: Many of the most important recent developments in data science depend on advances in machine learning. You may have heard about deep neural networks, which are behind many of these new applications. For instance, a special kind of neural network called a convolutional neural net allows computers to classify objects in images after being trained on many pictures of such objects.  These algorithms help drive autonomous cars like Tesla’s model X. The hype around the computer chess program AlphaZero hasn’t reached Elon Musk’s level yet, but it is revolutionizing many fields where humans used to outperform computers. Of course, computers could reliably beat the world’s best chess players by the mid-2000’s, but in 2018, the company DeepMind used a technique called reinforcement learning to teach a computer to play chess from scratch. Just 24 hours after learning the rules of the game, AlphaZero dominated the best computer chess programs like those programs beat up on human players! This suggests that there may be many areas where computers can quickly achieve superhuman performance. We can expect to see more of such technology in the future, perhaps one day we’ll even have an AlphaNavy!</p></li>
+</ul>
+<p>That last comment was a bit of a joke but the pace at which technology is advancing isn’t a laughing matter. Data science (more specifically, machine learning and artificial intelligence) has all sorts of applications, some of which which might be unethical or unwise. Though we won’t get into the details of these technical learning algorithms, we will discuss some of the ethical issues arising in data science later in this class.</p>
+</div>
+<div class="section" id="more-details-about-this-class">
+<h2><span class="section-number">2.2. </span>More details about this class<a class="headerlink" href="#more-details-about-this-class" title="Permalink to this headline">¶</a></h2>
+<p>The preceding discussion already points towards some of the special characteristics of this course that distinguish it from a traditional statistics course. First, we’ll make heavy use of the computer. We’ll learn to code basic instructions in <strong>Python</strong>, a free general-purpose computer language that is particularly popular for data science. You’ve probably already downloaded the Anaconda distribution of Python and installed it on your laptop. However, this is not a computer programming course so we’ve carefully picked an instructional path that teaches you how to do both data manipulation and statistical simulation without getting bogged down in computer jargon.</p>
+<p>We’ll work with complex real-world datasets, many of which involve thousands of rows of data. The range of applications of data science is astonishing. We’ve made a special effort to include data and applications that relate to the majors of the midshipmen taking this course, as well as datasets with military applications. There are several places where our methods differ from the traditional statistics course. Some majors, most notably Chemistry and Political Science, continue to make good use of these statistical methods so, when appropriate, we’ll point out how our methods relate to techniques in those disciplines.</p>
+<p>Finally, we’ve avoided most of the mathematical prerequisites for a traditional probability or statistics class. There are a few optional sections (labeled as <strong>PRO TIPS</strong>) where we use Calculus, but this class is essentially independent of your past advanced mathematics courses. If you’ve struggled with mathematics in the past, think of this course as a fresh start. And if you’ve done well in your previous mathematics courses, then you’ll be able to read some of those optional sections!</p>
+<p>Our approach is very much in line with recommendations laid out in the 2016 GAISE College Report, endorsed by the American Statistical Association. The material in this course is based off pioneering work in the U.C. Berkeley’s <a class="reference external" href="https://data8.org/">data8 course</a> but we’ve modified their curriculum to adapt to the needs of the Naval Academy, the Navy and the Marine Corps.</p>
+</div>
+<div class="section" id="overview-of-course-topics">
+<h2><span class="section-number">2.3. </span>Overview of course topics<a class="headerlink" href="#overview-of-course-topics" title="Permalink to this headline">¶</a></h2>
+<p>The course breaks up into roughly three parts: data manipulation and visualization, statistical methods for data analysis, and ethical and methodological problems in machine learning. We’ve listed some of the questions that we’ll be studying below.</p>
+<p><strong>Data manipulation and visualization</strong>:</p>
+<ul class="simple">
+<li><p><strong>Data management</strong>: How do we organize, collate, and clean datasets?</p></li>
+<li><p><strong>Summary statistics</strong>: What measurements give an appropriate summary of our data?</p></li>
+<li><p><strong>Visualization</strong>: How do we choose an appropriate visualization to display our data?</p></li>
+<li><p><strong>Communication</strong>: What factors should be considered when briefing senior leadership on the results of our analysis?</p></li>
+</ul>
+<p><strong>Statistical methods for data analysis</strong>:</p>
+<ul class="simple">
+<li><p><strong>Data collection</strong>: What can we learn from data collected outside ideally controlled laboratory settings?</p></li>
+<li><p><strong>Probability</strong>: How can we quantify and think about uncertainty and risk?</p></li>
+<li><p><strong>Conditional Probability</strong>: How do we reassess the likelihood of an event given new information?</p></li>
+<li><p><strong>Hypothesis testing</strong>: How strong is the evidence in a dataset for a particular claim? What level of evidence is necessary to support a decision or policy?</p></li>
+<li><p><strong>Confidence intervals</strong>: How can we use data and simulation to estimate unknown quantities?</p></li>
+<li><p><strong>Central limit theorem</strong>: Why do large datasets allow more precise results and what can we conclude when we just have a little data?</p></li>
+<li><p><strong>Regression and correlation</strong>: How can we use trends in our data to make good numerical predictions?</p></li>
+</ul>
+<p><strong>Advanced Topics</strong>:</p>
+<ul class="simple">
+<li><p><strong>Classification</strong> How can machine learning algorithms predict which military community a midshipman will join when they commission as an officer?</p></li>
+<li><p><strong>Ethics</strong>: Machine learning and data science allow predictions, which drive decisions, which affect individuals, communities, and our environment. How can we understand the ethical implications of machine learning applications?</p></li>
+<li><p><strong>Human-data interaction</strong>: Data science is not done in a vacuum; it takes place in societies, with all their complex issues. How do social factors interact with machine learning applications?</p></li>
+<li><p><strong>Decision making</strong>: What are the key questions to ask about any data analysis?</p></li>
+</ul>
+</div>
+<div class="section" id="work-flow-in-this-course">
+<h2><span class="section-number">2.4. </span>Work flow in this course<a class="headerlink" href="#work-flow-in-this-course" title="Permalink to this headline">¶</a></h2>
+<p>We’ll settle into a very structured work flow in this course. You’ll do a small amount of reading prior to each class. In-class interactive lectures and labs will require that you’ve done this background reading, so we’ll have daily reading quizzes to reward your efforts. We will have approximately ten in-class labs done in groups of two to three midshipmen and ten individual homework assignments. We will also have five in-class quizzes, two tests, and a final exam to <del>test</del> celebrate 😃 your progress.</p>
+<p>Your instructor will have office hours for you to set up extra instruction (EI). As well, we have a very talented group of Midshipman Group Study (MGSP) Leaders that excelled in this course and are keen to work with you to ensure your success. We realize that working with the computer and dealing with data are not intuitive concepts and we are committed to providing strong support for you in this course. It is not a sign of weakness to ask for help; rather it shows initiative and commitment.</p>
+</div>
+<div class="section" id="income-in-the-usa">
+<h2><span class="section-number">2.5. </span>Income in the USA<a class="headerlink" href="#income-in-the-usa" title="Permalink to this headline">¶</a></h2>
+<p>Let’s look at an example of data analysis using U.S. household income data from 2010 to 2019. The data is from a random sample of over 800 thousand households over 11 years. Incomes are not adjusted for inflation, so take this into account when comparing values. The data has been obtained from the <a class="reference external" href="https://doi.org/10.18128/D030.V6.0">IPUMS-CPS organization</a>. Don’t worry about the commands below; we are just trying to give you a feel for some of the kinds of analysis we’ll be doing.</p>
+<div class="section" id="install-the-datascience-package">
+<h3><span class="section-number">2.5.1. </span>Install the Datascience Package<a class="headerlink" href="#install-the-datascience-package" title="Permalink to this headline">¶</a></h3>
+<p>Before doing anything else, we need to <strong>install</strong> the <code class="docutils literal notranslate"><span class="pre">datascience</span></code> package. This contains specialized commands that make it easier to learn data science tasks in Python.</p>
+<p>This only needs to be done <strong>once on each machine</strong>. We run the following code cell in a Jupyter notebook to install the package.</p>
+<div class="cell tag_remove-stdout docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># left click on this cell and hit SHIFT-ENTER</span>
+<span class="o">!</span> pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org datascience
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+</div>
+</div>
+<p>We’ll also import the <code class="docutils literal notranslate"><span class="pre">datascience</span></code> package and other packages into our Python session, giving us access to special commands.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datascience</span> <span class="kn">import</span> <span class="o">*</span>                 <span class="c1"># datascience library has great data science commands</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>                        <span class="c1"># numpy has great numerical commands</span>
+
+<span class="c1"># These following lines do some fancy plotting magic; you can safely ignore them</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plots</span>
+<span class="n">plots</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="ne">FutureWarning</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We read in the data from the file <code class="docutils literal notranslate"><span class="pre">income_data.csv</span></code>. A csv file is a <strong>comma-separated value</strong> file. It contains a table of data, where the entries of each row appear on their own line in the file and the values in the columns are separated by commas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">income_data</span> <span class="o">=</span> <span class="n">Table</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s2">&quot;income_data.csv&quot;</span><span class="p">)</span>
+<span class="n">income_data</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table border="1" class="dataframe">
+    <thead>
+        <tr>
+            <th>Year</th> <th>Income</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>2009</td> <td>144000</td>
+        </tr>
+        <tr>
+            <td>2009</td> <td>162162</td>
+        </tr>
+        <tr>
+            <td>2009</td> <td>113549</td>
+        </tr>
+        <tr>
+            <td>2009</td> <td>93506 </td>
+        </tr>
+        <tr>
+            <td>2009</td> <td>18953 </td>
+        </tr>
+        <tr>
+            <td>2009</td> <td>9113  </td>
+        </tr>
+        <tr>
+            <td>2009</td> <td>165103</td>
+        </tr>
+        <tr>
+            <td>2009</td> <td>95180 </td>
+        </tr>
+        <tr>
+            <td>2009</td> <td>91231 </td>
+        </tr>
+        <tr>
+            <td>2009</td> <td>122528</td>
+        </tr>
+    </tbody>
+</table>
+<p>... (800949 rows omitted)</p></div></div>
+</div>
+</div>
+<div class="section" id="summary-data">
+<h3><span class="section-number">2.5.2. </span>Summary Data<a class="headerlink" href="#summary-data" title="Permalink to this headline">¶</a></h3>
+<p>Now we look at the yearly mean, median, and high incomes. We put them all in a new table.</p>
+<p>The <strong>mean</strong> of a collection of data is the <strong>average value</strong> of the data: to compute the mean we sum up the values and divide by the number of values. The <strong>median</strong> of a collection of data is the <strong>middle value</strong> of the data. We line up the values in increasing order. If the number of values is odd, then the median is the middle value. If the number of values is even the median is the average of the two values that are in the middle of the collection. Don’t worry about the hidden code below, but do look at its output! What happened to the mean income from 2009 to 2019? What happened to the median income over the same time period?</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">summary_by_year</span> <span class="o">=</span> <span class="n">Table</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s2">&quot;summary_by_year.csv&quot;</span><span class="p">)</span>
+<span class="n">summary_by_year</span><span class="o">.</span><span class="n">set_format</span><span class="p">(</span><span class="s2">&quot;Income mean&quot;</span><span class="p">,</span><span class="n">NumberFormatter</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">summary_by_year</span><span class="o">.</span><span class="n">set_format</span><span class="p">(</span><span class="s2">&quot;Income median&quot;</span><span class="p">,</span><span class="n">NumberFormatter</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">summary_by_year</span><span class="o">.</span><span class="n">set_format</span><span class="p">(</span><span class="s2">&quot;Income high&quot;</span><span class="p">,</span><span class="n">NumberFormatter</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">summary_by_year</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table border="1" class="dataframe">
+    <thead>
+        <tr>
+            <th>Year</th> <th>Income mean</th> <th>Income median</th> <th>Income high</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>2009</td> <td>70,482.57  </td> <td>52,204.00    </td> <td>1,010,103  </td>
+        </tr>
+        <tr>
+            <td>2010</td> <td>69,650.93  </td> <td>51,157.00    </td> <td>1,177,783  </td>
+        </tr>
+        <tr>
+            <td>2011</td> <td>69,283.70  </td> <td>51,016.50    </td> <td>1,959,999  </td>
+        </tr>
+        <tr>
+            <td>2012</td> <td>71,731.12  </td> <td>52,000.00    </td> <td>2,099,999  </td>
+        </tr>
+        <tr>
+            <td>2013</td> <td>73,567.98  </td> <td>53,203.00    </td> <td>2,742,997  </td>
+        </tr>
+        <tr>
+            <td>2014</td> <td>75,625.85  </td> <td>55,000.00    </td> <td>2,199,998  </td>
+        </tr>
+        <tr>
+            <td>2015</td> <td>77,440.64  </td> <td>55,238.00    </td> <td>2,204,278  </td>
+        </tr>
+        <tr>
+            <td>2016</td> <td>79,931.58  </td> <td>57,200.00    </td> <td>2,289,913  </td>
+        </tr>
+        <tr>
+            <td>2017</td> <td>83,614.13  </td> <td>60,000.00    </td> <td>3,299,997  </td>
+        </tr>
+        <tr>
+            <td>2018</td> <td>86,599.91  </td> <td>61,822.00    </td> <td>3,201,026  </td>
+        </tr>
+        <tr>
+            <td>2019</td> <td>90,240.42  </td> <td>64,021.00    </td> <td>2,247,998  </td>
+        </tr>
+    </tbody>
+</table></div></div>
+</div>
+</div>
+<div class="section" id="percentiles">
+<h3><span class="section-number">2.5.3. </span>Percentiles<a class="headerlink" href="#percentiles" title="Permalink to this headline">¶</a></h3>
+<p>The 80th percentile of a collection of values is the smallest value in the collection that is at least as large as 80% of all of the values. Roughly speaking, if you line up all the values from smallest to largest, the 80th percentile will be the value 80% along the list. This is only a rough idea though: if we only have 3 values then there is no value 80% along the list, which is why we phrase the definition of percentile in that awkward way.</p>
+<p>The 25th percentile is sometimes called the <strong>first quartile</strong>, the 50th percentile is sometimes called the second quartile, and the 75% percentile is sometimes called the third quartile. Answer this question for yourself: Is the 99th percentile a large value relative to the other values in the collection or a small value?</p>
+<p>You can read more about percentiles in section 13.1 of the <a class="reference external" href="https://www.inferentialthinking.com/chapters/13/1/Percentiles.html">data8 textbook</a>.</p>
+</div>
+<div class="section" id="we-are-the-99">
+<h3><span class="section-number">2.5.4. </span>We are the 99%<a class="headerlink" href="#we-are-the-99" title="Permalink to this headline">¶</a></h3>
+<p>The slogan, “We are the 99%” originated in the Occupy movement, which grew out of protests in New York City in 2011. The movement was a push for social justice and the slogan references the increasing concentration of wealth and income among the top 1%.</p>
+<a class="reference internal image-reference" href="../../_images/99percent.jpg"><img alt="protest march" class="align-center" src="../../_images/99percent.jpg" style="width: 400px;" /></a>
+<center> Protesters march in downtown Portland, Oregon on Nov. 17, 2011. (AP Photo/Don Ryan) </center><p>Let’s compute and plot the 25th, 50th, 75th and 99th percentiles for our household income data over the period 2011 to 2019. First we make a table with the percentiles. Notice how difficult it is to get insight from a glance at the table. We’d need to to do a lot of work to make sense of this data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">percentiles_data</span> <span class="o">=</span> <span class="n">Table</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">&#39;summary_by_year_with_percentiles.csv&#39;</span><span class="p">)</span>
+<span class="n">percentiles_data</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table border="1" class="dataframe">
+    <thead>
+        <tr>
+            <th>Year</th> <th>Income mean</th> <th>Income median</th> <th>Income high</th> <th>25th percentile</th> <th>75th percentile</th> <th>99th percentile</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>2009</td> <td>70482.6    </td> <td>52204        </td> <td>1010103    </td> <td>26326          </td> <td>91748          </td> <td>409619         </td>
+        </tr>
+        <tr>
+            <td>2010</td> <td>69650.9    </td> <td>51157        </td> <td>1177783    </td> <td>25721          </td> <td>90050          </td> <td>419358         </td>
+        </tr>
+        <tr>
+            <td>2011</td> <td>69283.7    </td> <td>51016.5      </td> <td>1959999    </td> <td>25157          </td> <td>90577          </td> <td>323815         </td>
+        </tr>
+        <tr>
+            <td>2012</td> <td>71731.1    </td> <td>52000        </td> <td>2099999    </td> <td>26000          </td> <td>92697          </td> <td>356216         </td>
+        </tr>
+        <tr>
+            <td>2013</td> <td>73568      </td> <td>53203        </td> <td>2742997    </td> <td>26378          </td> <td>95020          </td> <td>356400         </td>
+        </tr>
+        <tr>
+            <td>2014</td> <td>75625.9    </td> <td>55000        </td> <td>2199998    </td> <td>27000          </td> <td>98050          </td> <td>370320         </td>
+        </tr>
+        <tr>
+            <td>2015</td> <td>77440.6    </td> <td>55238        </td> <td>2204278    </td> <td>26915          </td> <td>100601         </td> <td>380558         </td>
+        </tr>
+        <tr>
+            <td>2016</td> <td>79931.6    </td> <td>57200        </td> <td>2289913    </td> <td>28000          </td> <td>103430         </td> <td>400084         </td>
+        </tr>
+        <tr>
+            <td>2017</td> <td>83614.1    </td> <td>60000        </td> <td>3299997    </td> <td>29376          </td> <td>107002         </td> <td>433989         </td>
+        </tr>
+        <tr>
+            <td>2018</td> <td>86599.9    </td> <td>61822        </td> <td>3201026    </td> <td>30001          </td> <td>111160         </td> <td>434464         </td>
+        </tr>
+        <tr>
+            <td>2019</td> <td>90240.4    </td> <td>64021        </td> <td>2247998    </td> <td>31692          </td> <td>114000         </td> <td>470614         </td>
+        </tr>
+    </tbody>
+</table></div></div>
+</div>
+<p>In contrast, we can get an immediate sense of what is going on from a plot of the data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># gather the percentile data in its own table and plot values with Year on the x-axis:</span>
+<span class="n">summary_with_just_percentile_data</span> <span class="o">=</span> <span class="n">percentiles_data</span><span class="o">.</span><span class="n">select</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+<span class="n">summary_with_just_percentile_data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/Class Notes Day 01_16_0.png" src="../../_images/Class Notes Day 01_16_0.png" />
+</div>
+</div>
+<p>The data shows that the 99th percentile for household income took a huge hit in 2011 and then rebounded over the following 5 years. The income for the 99th percentile has been rising steeply since 2011, particularly compared with the income gains among the rest of the population.</p>
+<p>Caution is advised when comparing percentiles, averages or other summary statistics over time.   We aren’t tracking individual households. Any individual household may suffer a serious loss, dropping it out of the 99th percentile. However, another household takes its place, propping up the 99th percentile’s value. So the group’s composition may change from year to year, masking changes. It becomes hard to tell whether a drop in income is due to a drop in income for the top 1% overall, or whether the drop is due to changes in who makes up the top 1%.</p>
+</div>
+<div class="section" id="skewed-distributions">
+<h3><span class="section-number">2.5.5. </span>Skewed distributions<a class="headerlink" href="#skewed-distributions" title="Permalink to this headline">¶</a></h3>
+<p>Let’s look at a <strong>histogram</strong> of the 2019 household incomes, as well as the median and mean incomes. Distributions of income, wealth, and housing prices tend to be heavily <strong>right-skewed</strong>: there is a long tail of rare high values that pulls the mean above the median. You can read more about skewed distributions in section 14.1 of the <a class="reference external" href="https://www.inferentialthinking.com/chapters/14/1/Properties_of_the_Mean.html">data8 textbook</a>. Again, ignore the hidden code below and just look at the picture that it outputs.</p>
+<div class="cell tag_hide-input tag_remove-stderr docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># restrict to 2019 data</span>
+<span class="n">income_2019</span> <span class="o">=</span> <span class="n">income_data</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span><span class="n">are</span><span class="o">.</span><span class="n">equal_to</span><span class="p">(</span><span class="mi">2019</span><span class="p">))</span>
+
+<span class="c1"># compute some summary statistics</span>
+<span class="n">median_2019</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">income_2019</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="s1">&#39;Income&#39;</span><span class="p">))</span>
+<span class="n">mean_2019</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">income_2019</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="s1">&#39;Income&#39;</span><span class="p">))</span>
+<span class="n">ninety_ninth_2019</span> <span class="o">=</span> <span class="n">percentile</span><span class="p">(</span><span class="mi">99</span><span class="p">,</span><span class="n">income_2019</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="s1">&#39;Income&#39;</span><span class="p">))</span>
+<span class="n">high_2019</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">income_2019</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="s1">&#39;Income&#39;</span><span class="p">))</span>
+
+<span class="c1"># make a plot</span>
+<span class="n">income_2019</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s1">&#39;Income&#39;</span><span class="p">,</span><span class="n">are</span><span class="o">.</span><span class="n">below</span><span class="p">(</span><span class="n">ninety_ninth_2019</span><span class="p">))</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="s1">&#39;Income&#39;</span><span class="p">,</span><span class="n">unit</span><span class="o">=</span><span class="s1">&#39;Dollar&#39;</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">plots</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">mean_2019</span><span class="p">,</span><span class="n">mean_2019</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.00001</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;mean&#39;</span><span class="p">)</span>
+<span class="n">plots</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">median_2019</span><span class="p">,</span><span class="n">median_2019</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.00001</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;median&#39;</span><span class="p">)</span>
+<span class="n">plots</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">ninety_ninth_2019</span><span class="p">,</span><span class="n">ninety_ninth_2019</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.00001</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gold&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;99th perc.&#39;</span><span class="p">)</span>
+<span class="n">plots</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper center&#39;</span><span class="p">)</span>
+<span class="n">plots</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Some Incomes&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/Class Notes Day 01_19_1.png" src="../../_images/Class Notes Day 01_19_1.png" />
+</div>
+</div>
+<p>You can clearly see the right tail in the plot above. It pulls the mean (the red line giving the average income) above the median income (represented by the green line). That is why economists often report median earnings: this is the earning of the “average person” rather than the average earnings of a person (which can be high just because there are a few <strong>very</strong> high income people). Things look pretty rosy for the top 1% in this picture, but they aren’t even really on the picture at all! We only plotted the incomes of people in the bottom 99% on the graph above.  Below, we plot <strong>all the incomes</strong>.</p>
+<div class="cell tag_hide-input tag_remove-stderr docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">income_2019</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="s1">&#39;Income&#39;</span><span class="p">,</span><span class="n">unit</span><span class="o">=</span><span class="s1">&#39;Dollar&#39;</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">plots</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">mean_2019</span><span class="p">,</span><span class="n">mean_2019</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.00001</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;mean&#39;</span><span class="p">)</span>
+<span class="n">plots</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">median_2019</span><span class="p">,</span><span class="n">median_2019</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.00001</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;median&#39;</span><span class="p">)</span>
+<span class="n">plots</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">ninety_ninth_2019</span><span class="p">,</span><span class="n">ninety_ninth_2019</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.00001</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gold&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;99th perc.&#39;</span><span class="p">)</span>
+<span class="n">plots</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">high_2019</span><span class="p">,</span><span class="n">high_2019</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.00001</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;high&#39;</span><span class="p">)</span>
+<span class="n">plots</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper center&#39;</span><span class="p">)</span>
+<span class="n">plots</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;All incomes&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/Class Notes Day 01_21_1.png" src="../../_images/Class Notes Day 01_21_1.png" />
+</div>
+</div>
+<p>One of the central problems in American society right now is that many people only get their news from a single (often biased) source. Some people only get information from social media outlets, meaning that they only have visibility on what their friends are experiencing. If, like most of us, you have a limited range of friends, then you may be unaware of other people’s experiences. This has led to social bubbles, where our experiences are amplified by the echo of social media. Looking at our first histogram of incomes, we might imagine that a person with the median income may see a person earning half a million dollars as incredibly wealthy. However, if that wealthy person only sees the experience of others in the top 1% then they would feel that there are lots of people doing better than them in this economy. Both perspectives are appropriate responses to the data available to each person; we can only get a full picture of the true situation when we look at a massive dataset that is representative of the entire U.S. population.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Day 01/Lecture Notes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../Python%20Installation%20-%20To%20Do%20Prior%20To%20Class/Python%20Installation%20Instructions%20-%20To%20do%20prior%20to%20class.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">1. </span>Python Installation Instructions</p>
+            </div>
+        </a>
+    </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Prof. Will Traves<br/>
+        
+            &copy; Copyright None.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

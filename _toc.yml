@@ -1,0 +1,14 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+defaults:
+  numbered: true
+parts: 
+  - caption: Preamble
+    chapters:
+    - file: Day 01/Python Installation - To Do Prior To Class/Python Installation Instructions - To do prior to class.ipynb
+  - caption: Second Part
+    chapters:
+    - file: Day 01/Lecture Notes/Class Notes Day 01.ipynb
