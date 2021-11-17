@@ -6,9 +6,10 @@ root: intro
 defaults:
   numbered: true
 parts: 
-  - caption: Preamble
+  - caption: Prior to Day 01
     chapters:
     - file: Day 01/Python Installation - To Do Prior To Class/Python Installation Instructions - To do prior to class.ipynb
-  - caption: Second Part
+  - caption: Day 01
     chapters:
     - file: Day 01/Lecture Notes/Class Notes Day 01.ipynb
+    - file: Day 01/Reading For Next Class/Reading.ipynb

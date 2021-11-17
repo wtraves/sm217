@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Data Science for Decision Makers
+# # Day 01 Lecture Notes: Data Science for Decision Makers
 # 
 # Much of this course will focus on **data analysis and the communication of insights obtained from data**, key skills for military officers. The Navy's Education for Seapower report makes a strong case for developing these skills at USNA: 
 # 
