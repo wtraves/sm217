@@ -1,0 +1,860 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 00: Your First Data Science Notebook &#8212; SM217 Introduction to Data Science</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/trident_colors.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SM217 Introduction to Data Science</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../intro.html">
+   SM217: Introduction to Data Science
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Prior to Day 01
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../Day%2001/Python%20Installation%20-%20To%20Do%20Prior%20To%20Class/Python%20Installation%20Instructions%20-%20To%20do%20prior%20to%20class.html">
+   1. Python Installation Instructions
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Day 01
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../Day%2001/Lecture%20Notes/Class%20Notes%20Day%2001.html">
+   2. Day 01 Lecture Notes: Data Science for Decision Makers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../Day%2001/Reading%20For%20Next%20Class/Reading.html">
+   3. Reading for Next Class: Introduction to Data Science and Percentiles
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Day 02
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Website%20Files/lab%2000-LASTNAMES.html">
+   4. Lab 00: Your First Data Science Notebook
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/Day 02/Lab 00/old lab 00/lab 00-2021-LASTNAMES.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FDay 02/Lab 00/old lab 00/lab 00-2021-LASTNAMES.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Day 02/Lab 00/old lab 00/lab 00-2021-LASTNAMES.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Lab 00: Your First Data Science Notebook
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#todays-lab">
+     Today’s lab
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jupyter-notebooks">
+   1. Jupyter notebooks
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#text-cells">
+     1.1. Text cells
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#code-cells">
+     1.2. Code cells
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#writing-jupyter-notebooks">
+     1.3. Writing Jupyter notebooks
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#errors">
+     1.4. Errors
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-kernel">
+     1.5. The Kernel
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#submitting-your-work">
+     1.6. Submitting your work
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comments">
+     1.7. Comments
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numbers">
+   2. Numbers
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arithmetic">
+     2.1. Arithmetic
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#names">
+   3. Names
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calling-functions">
+   4. Calling functions
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiple-arguments">
+     4.1 Multiple arguments
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#application-inequality-in-the-usa">
+     4.2. Application: Inequality in the USA.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p><span class='note'><i>Make me look good.</i> Click on the cell below and press <kbd>Ctrl</kbd>+<kbd>Enter</kbd>.</span></p>
+<div class="cell tag_skip docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="ne">FutureWarning</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+<span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;&lt;link href=&#39;http://fonts.googleapis.com/css?family=Lora:400,700,400i,700i&#39; rel=&#39;stylesheet&#39;&gt;&lt;link href=&#39;https://fonts.googleapis.com/css?family=Lato:300,400,700,300i,400i,700i&#39; rel=&#39;stylesheet&#39;&gt;&lt;link href=&#39;https://fonts.googleapis.com/css?family=Inconsolata:400&#39; rel=&#39;stylesheet&#39;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css&quot;&gt;&lt;style&gt;h1, h2, h3, h4, h5 { font-family: &#39;Lato&#39;, sans-serif; } h5 { font-style: normal; } kbd { font-family: Lato, serif; } hr { border-width: 2px; border-color: #a9a9a9; } .cite { font-size: 85%; text-align: right; margin-top: 10px; } .note { font-family: Lora, serif; font-size: 10pt; font-weight: 400; margin-top: 0; margin-bottom: 0; } h5.prehead { font-family: Lato, serif; font-style: normal; font-size: 14pt; font-weight: 300; margin-bottom: 15px; margin-top: 30px; } h5.lesson { font-family: Lato, serif; font-weight: 400; font-size: 15pt; font-style: normal; margin-top: 0px; margin-bottom: 5px; } h1.lesson_title { font-family: Lato, serif; font-weight: 300; font-size: 32pt; line-height: 110%; color:#CD2305; margin-top: 0px; margin-bottom: 15px; } div.cell{ max-width: 1120px; margin-left: auto; margin-right: auto; } div.text_cell_render { font-family: Lora, serif; line-height: 160%; font-size: 13pt; } .rendered_html pre, .rendered_html code  { font-family: Inconsolata, monospace !important; font-size: 13pt; } div.CodeMirror, div.output_area pre, div.prompt { font-family: Inconsolata, monospace !important; font-size: 125%; } .rendered_html ul li { margin-top: 0.75em; margin-bottom: 0.75em; } .rendered_html ul li ul li { margin-top: 0.5em; margin-bottom: 0.5em; } .rred { color: #a00000; } &lt;/style&gt; &lt;script&gt; MathJax.Hub.Config({ TeX: { extensions: [&quot;AMSmath.js&quot;] }, tex2jax: { inlineMath: [ [&#39;$&#39;,&#39;$&#39;], [&quot;</span><span class="se">\\</span><span class="s1">(&quot;,&quot;</span><span class="se">\\</span><span class="s1">)&quot;] ], displayMath: [ [&#39;$$&#39;,&#39;$$&#39;], [&quot;</span><span class="se">\\</span><span class="s1">[&quot;,&quot;</span><span class="se">\\</span><span class="s1">]&quot;] ] }, displayAlign: &#39;center&#39;, // Change this to &#39;center&#39; to center equations. &quot;HTML-CSS&quot;: { styles: {&#39;.MathJax_Display&#39;: {&quot;margin&quot;: &quot;0.75em 0&quot;}} } }); &lt;/script&gt;&#39;&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="lab-00-your-first-data-science-notebook">
+<h1>Lab 00: Your First Data Science Notebook<a class="headerlink" href="#lab-00-your-first-data-science-notebook" title="Permalink to this headline">¶</a></h1>
+<p>You will often complete lab assignments like this one.  You can’t learn technical subjects without hands-on practice, so labs are an important part of the course. This lab is due by 2359 on 30 AUG. You will get a bonus point if you submit by 2359 on 29 AUG.</p>
+<p>Collaborating on labs is more than okay – it’s encouraged! We’ll work in groups of two or three midshipmen. You should each type answers on your own laptop. Just watching someone else type is not going to help you as much as entering things on your own. You’ll often submit just one file for your entire group though. You should rarely be stuck for more than a few minutes on questions in labs, so ask the instructor for help if you need it. (Explaining things is beneficial, too – the best way to solidify your knowledge of a subject is to explain it.)</p>
+<div class="section" id="todays-lab">
+<h2>Today’s lab<a class="headerlink" href="#todays-lab" title="Permalink to this headline">¶</a></h2>
+<p>In today’s lab, you’ll learn how to:</p>
+<ol class="simple">
+<li><p>navigate Jupyter notebooks (like this one);</p></li>
+<li><p>evaluate and evaluate some basic <em>expressions</em> in Python, the computer language of the course;</p></li>
+<li><p>call <em>functions</em> to use code other people have written, and</p></li>
+<li><p>break computations down into smaller parts to make them more manageable.</p></li>
+</ol>
+<p>This lab covers parts of <a class="reference external" href="http://www.inferentialthinking.com/chapters/03/programming-in-python.html">Chapter 3</a> of the online textbook. Think of this lab as an introduction to that material. You should read the book, but not right now. Instead, let’s get started!</p>
+</div>
+</div>
+<div class="section" id="jupyter-notebooks">
+<h1>1. Jupyter notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this headline">¶</a></h1>
+<p>This webpage is called a Jupyter notebook. A notebook is a place to write programs and view their results.</p>
+<div class="section" id="text-cells">
+<h2>1.1. Text cells<a class="headerlink" href="#text-cells" title="Permalink to this headline">¶</a></h2>
+<p>In a notebook, each rectangle containing text or code is called a <em>cell</em>.</p>
+<p>Text cells (like this one) can be edited by double-clicking on them. They’re written in a simple format called <a class="reference external" href="http://daringfireball.net/projects/markdown/syntax">Markdown</a> to add formatting and section headings.  You don’t need to learn Markdown, but you might want to.</p>
+<p>After you edit a text cell, click the “run cell” button at the top that looks like ▶| to confirm any changes. (Try not to delete the instructions of the lab.)</p>
+<p><strong>Question 1. (1 pt)</strong> This paragraph is in its own text cell.  Try editing it so that this sentence is the last sentence in the paragraph, and then click the “run cell” ▶| button.  This sentence, for example, should be deleted. So should this one.</p>
+</div>
+<div class="section" id="code-cells">
+<h2>1.2. Code cells<a class="headerlink" href="#code-cells" title="Permalink to this headline">¶</a></h2>
+<p>Other cells contain code in the Python 3 language. Running a code cell will execute all of the code it contains.</p>
+<p>To run the code in a code cell, first click on that cell to activate it.  It’ll be highlighted with a little green or blue rectangle.  Next, either press the symbol on the left that looks like the picture on the “run cell” button or hold down the <code class="docutils literal notranslate"><span class="pre">shift</span></code> key and press <code class="docutils literal notranslate"><span class="pre">return</span></code> or <code class="docutils literal notranslate"><span class="pre">enter</span></code>.</p>
+<p>Try running this cell:</p>
+<div class="cell tag_skip docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice that you need to put a pair of double quotes around text that you want to print.</p>
+<p>The fundamental building block of Python code is an expression. Cells can contain multiple lines with multiple expressions. When you run a cell, the lines of code are executed in the order in which they appear. Every <code class="docutils literal notranslate"><span class="pre">print</span></code> expression prints a line. Run the next cell and notice the order of the output.</p>
+<div class="cell tag_q2 docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;First this line is printed,&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;and then this one.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Question 2. (1 pt)</strong> Change the cell above so that it prints out:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>First this line is printed,
+then the whole shebang,
+and then this one.
+</pre></div>
+</div>
+<p><em>Hint:</em> If you’re stuck on this problem for more than a few minutes, try talking to a neighbor or the instructor.  That’s a good idea for any lab problem.</p>
+</div>
+<div class="section" id="writing-jupyter-notebooks">
+<h2>1.3. Writing Jupyter notebooks<a class="headerlink" href="#writing-jupyter-notebooks" title="Permalink to this headline">¶</a></h2>
+<p>You can use Jupyter notebooks for your own projects or documents.  When you make your own notebook, you’ll need to create your own cells for text and code.</p>
+<p>To add a cell, click the + button in the menu bar.  It’ll start out as a code cell.  You can change it to a text cell by clicking inside it so it’s highlighted, clicking the drop-down box next to the restart (⟳) button in the menu bar, and choosing “Markdown”.</p>
+<p><strong>Question 3. (1 pt)</strong> Add a code cell below this one.  Write code in it that prints out:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>A whole new cell! Wow!
+</pre></div>
+</div>
+<p>Run your cell to verify that it works.</p>
+</div>
+<div class="section" id="errors">
+<h2>1.4. Errors<a class="headerlink" href="#errors" title="Permalink to this headline">¶</a></h2>
+<p>Python is a language, and like natural human languages, it has rules.  It differs from natural language in two important ways:</p>
+<ol class="simple">
+<li><p>The rules are <em>simple</em>.  You can learn most of them in a few weeks and gain reasonable proficiency with the language in a semester.</p></li>
+<li><p>The rules are <em>rigid</em>.  If you’re proficient in a natural language, you can understand a non-proficient speaker, glossing over small mistakes.  A computer running Python code is not smart enough to do that.</p></li>
+</ol>
+<p>Whenever you write code, you’ll make mistakes.  When you run a code cell that has errors, Python will sometimes produce error messages to tell you what you did wrong.</p>
+<p>Errors are okay; even experienced programmers make many errors.  When you make an error, you just have to find the source of the problem, fix it, and move on.</p>
+<p>We have made an error in the next cell.  Run it and see what happens.</p>
+<div class="cell tag_skip docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This line is missing something.&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You should see something like this (minus our annotations):</p>
+<p><img alt="error.jpg" src="Day 02/Lab 00/old lab 00/attachment:error.jpg" /></p>
+<p>The last line of the error output attempts to tell you what went wrong.  The <em>syntax</em> of a language is its structure, and this <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code> tells you that you have created an illegal structure.  “<code class="docutils literal notranslate"><span class="pre">EOF</span></code>” means “end of file,” so the message is saying Python expected you to write something more (in this case, a right parenthesis) before finishing the cell. Sometimes the error is not where Python thinks it is. If you can’t find the error on the line that Python indicates, try looking at the line immediately prior to the line indicated by Python.</p>
+<p>There’s a lot of terminology in programming languages, but you don’t need to know it all in order to make the computer do what you want. If you see a cryptic message like this, you can often get by without deciphering it.  (Of course, if you’re frustrated, ask a neighbor or the instructor for help.)</p>
+<p>Try to fix the code above so that you can run the cell and see the intended message instead of an error.</p>
+</div>
+<div class="section" id="the-kernel">
+<h2>1.5. The Kernel<a class="headerlink" href="#the-kernel" title="Permalink to this headline">¶</a></h2>
+<p>The kernel is a program that executes the code inside your notebook and outputs the results. In the top right of your window, you can see a circle that indicates the status of your kernel. If the circle is empty (⚪), the kernel is idle and ready to execute code. If the circle is filled in (⚫), the kernel is busy running some code.</p>
+<p>You may run into problems where your kernel is stuck for an excessive amount of time, your notebook is very slow and unresponsive, or your kernel loses its connection. If this happens, try the following steps:</p>
+<ol class="simple">
+<li><p>At the top of your screen, click <strong>Kernel</strong>, then <strong>Interrupt</strong>.</p></li>
+<li><p>If that doesn’t help, click <strong>Kernel</strong>, then <strong>Restart</strong>. If you do this, you will have to run your code cells from the start of your notebook up until where you paused your work.</p></li>
+<li><p>If that doesn’t help, restart your server. First, save your work by clicking <strong>File</strong> at the top left of your screen, then <strong>Save and Checkpoint</strong>. Next, click on the browser tab containing your directory structure, click on the <strong>Running</strong> tab, and then click on the orange <strong>Shutdown</strong> box next to your file. Click back on the <strong>Files</strong> tab and open the notebook your were working on again. You can now click on the x in the tab containing this file to close the tab.</p></li>
+</ol>
+</div>
+<div class="section" id="submitting-your-work">
+<h2>1.6. Submitting your work<a class="headerlink" href="#submitting-your-work" title="Permalink to this headline">¶</a></h2>
+<p>All assignments in the course will be distributed as notebooks like this one. You will submit your work by saving your file and then uploading it to Blackboard. All files will have a LASTNAME or LASTNAMES as part of their name. You should immediately change that to your last name, in CAPITALS. If you are working with a partner, add both your last names, in CAPITALS, separated by a hyphen (-). Do that now by clicking on <strong>File</strong> and selecting <strong>Rename</strong>. For instance, a group with MIDN Smith and MIDN Raven would call the file <code class="docutils literal notranslate"><span class="pre">lab</span> <span class="pre">00-SMITH-RAVEN</span></code>. Also, fill in the cell below with your alpha codes replacing the … Depending on how many people are in your group, your cell should look like: <code class="docutils literal notranslate"><span class="pre">alphas</span> <span class="pre">=</span> <span class="pre">[220000]</span> <span class="pre">or</span> <span class="pre">alphas</span> <span class="pre">=</span> <span class="pre">[220000,220006]</span> <span class="pre">or</span> <span class="pre">alphas</span> <span class="pre">=</span> <span class="pre">[220000,220006,220012]</span></code>.</p>
+<div class="cell tag__alphas docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">global</span> <span class="n">alphas</span> <span class="c1"># don&#39;t bother changing this line, just leave it alone; change the line below:</span>
+<span class="n">alphas</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">,</span><span class="o">....</span><span class="p">,</span><span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="comments">
+<h2>1.7. Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
+<p>You may have noticed the symbol <code class="docutils literal notranslate"><span class="pre">#</span></code> in the first line of the cell above. That is called a <em>comment</em>.  It doesn’t make anything happen in Python; Python ignores anything on a line after a #.  Instead, it’s there to communicate something about the code to you, the human reader.  Comments are extremely useful.</p>
+</div>
+</div>
+<div class="section" id="numbers">
+<h1>2. Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline">¶</a></h1>
+<p>Quantitative information arises everywhere in data science and statistics. In addition to representing commands to print out lines, expressions can represent numbers and methods of combining numbers. The expression <code class="docutils literal notranslate"><span class="pre">3.2500</span></code> evaluates to the number 3.25. (Run the cell and see.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">3.2500</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice that we didn’t have to <code class="docutils literal notranslate"><span class="pre">print</span></code>. When you run a notebook cell, if the <strong>last line</strong> has a value, then Jupyter helpfully prints out that value for you. However, it won’t print out prior lines automatically.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Above, you should see that 4 is the value of the last expression, 2 is printed, but 3 is lost forever because it was neither printed nor last.</p>
+<p>You don’t want to print everything all the time anyway.  But if you feel sorry for 3, change the cell above to print it.</p>
+<div class="section" id="arithmetic">
+<h2>2.1. Arithmetic<a class="headerlink" href="#arithmetic" title="Permalink to this headline">¶</a></h2>
+<p>The line in the next cell subtracts.  Its value is what you’d expect.  Run it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">3.25</span> <span class="o">-</span> <span class="mf">1.5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Many basic arithmetic operations are built in to Python.  The textbook section on <a class="reference external" href="http://www.inferentialthinking.com/chapters/03/1/expressions.html">Expressions</a> describes all the arithmetic operators used in the course.  The common operator that differs from typical math notation is <code class="docutils literal notranslate"><span class="pre">**</span></code>, which raises one number to the power of the other. So, <code class="docutils literal notranslate"><span class="pre">2**3</span></code> stands for <span class="math notranslate nohighlight">\(2^3\)</span> and evaluates to 8.</p>
+<p>The order of operations is what you learned in elementary school, and Python also has parentheses.  For example, compare the outputs of the cells below. Use parentheses to get a cool year for commissioning!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">8</span><span class="o">+</span><span class="mi">6</span><span class="o">*</span><span class="mi">5</span><span class="o">-</span><span class="mi">6</span><span class="o">*</span><span class="mi">3</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="mi">2</span><span class="o">**</span><span class="mi">3</span><span class="o">/</span><span class="mi">4</span><span class="o">*</span><span class="mi">7</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">8</span><span class="o">+</span><span class="p">(</span><span class="mi">6</span><span class="o">*</span><span class="mi">5</span><span class="o">-</span><span class="p">(</span><span class="mi">6</span><span class="o">*</span><span class="mi">3</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="p">((</span><span class="mi">2</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span><span class="o">*</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In standard math notation, the first expression is</p>
+<div class="math notranslate nohighlight">
+\[8 + 6 \times 5 - 6 \times 3^2 \times \frac{2^3}{4} \times 7,\]</div>
+<p>while the second expression is</p>
+<div class="math notranslate nohighlight">
+\[8 + (6 \times 5 - (6 \times 3))^2 \times (\frac{(2^3)}{4} \times 7).\]</div>
+<p><strong>Question 4. (2 pts)</strong> Write a Python expression in this next cell that’s equal to <span class="math notranslate nohighlight">\(5 \times 3 - 51 + 2^{.5 \times 22} + 4 \times 2\)</span>.</p>
+<p>Replace the ellipses (<code class="docutils literal notranslate"><span class="pre">...</span></code>) with your expression.  Try to use parentheses only when necessary.</p>
+<p><em>Hint:</em> The correct output should start with a familiar number. Check your answer: the digits should sum to 4.</p>
+<div class="cell tag_q4 docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="names">
+<h1>3. Names<a class="headerlink" href="#names" title="Permalink to this headline">¶</a></h1>
+<p>In natural language, we have terminology that lets us quickly reference very complicated concepts.  We don’t say, “That’s a large mammal with brown fur and sharp teeth!”  Instead, we just say, “Bear!”</p>
+<p>Similarly, an effective strategy for writing code is to define names for data as we compute it, like a lawyer would define terms for complex ideas at the start of a legal document to simplify the rest of the writing.</p>
+<p>In Python, we do this with <em>assignment statements</em>. An assignment statement has a name on the left side of an <code class="docutils literal notranslate"><span class="pre">=</span></code> sign and an expression to be evaluated on the right.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ten</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>When you run that cell, Python first evaluates the first line.  It computes the value of the expression <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">+</span> <span class="pre">4</span></code>, which is the number 10.  Then it gives that value the name <code class="docutils literal notranslate"><span class="pre">ten</span></code>.  At that point, the code in the cell is done running.</p>
+<p>After you run that cell, the value 10 is bound to the name <code class="docutils literal notranslate"><span class="pre">ten</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ten</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The statement <code class="docutils literal notranslate"><span class="pre">ten</span> <span class="pre">=</span> <span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">+</span> <span class="pre">4</span></code> is not asserting that <code class="docutils literal notranslate"><span class="pre">ten</span></code> is already equal to <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">+</span> <span class="pre">4</span></code>, as we might expect by analogy with math notation.  Rather, that line of code changes what <code class="docutils literal notranslate"><span class="pre">ten</span></code> means; it now refers to the value 10, whereas before it meant nothing at all.</p>
+<p>If the designers of Python had been ruthlessly pedantic, they might have made us write</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>define the name ten to hereafter have the value of 3 * 2 + 4 
+</pre></div>
+</div>
+<p>instead.  You will probably appreciate the brevity of “<code class="docutils literal notranslate"><span class="pre">=</span></code>”!  But keep in mind that this is the real meaning.</p>
+<p><strong>Question 5. (1 pt)</strong> Try writing code that computes the sum of 2 and <code class="docutils literal notranslate"><span class="pre">eleven</span></code>. You should get an error because we haven’t assigned a value to the name <code class="docutils literal notranslate"><span class="pre">eleven</span></code>.</p>
+<div class="cell tag_q5 docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A common pattern in Jupyter notebooks is to assign a value to a name and then immediately evaluate the name in the last line in the cell so that the value is displayed as output.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">close_to_pi</span> <span class="o">=</span> <span class="mi">355</span><span class="o">/</span><span class="mi">113</span>
+<span class="n">close_to_pi</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Another common pattern is that a series of lines in a single cell will build up a complex computation in stages, naming the intermediate results. In the cell below we’ll compute the yearly salary of someone who earns 840 dollars every two weeks.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">biweekly_salary</span> <span class="o">=</span> <span class="mi">840</span>   
+<span class="n">number_of_paychecks_in_a_year</span> <span class="o">=</span> <span class="mi">26</span>           <span class="c1"># 52 weeks divided by 2 weeks per paycheck </span>
+<span class="n">yearly_salary</span> <span class="o">=</span> <span class="n">number_of_paychecks_in_a_year</span> <span class="o">*</span> <span class="n">biweekly_salary</span> 
+<span class="n">yearly_salary</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Aside</strong>: confused about the meaning of <code class="docutils literal notranslate"><span class="pre">biweekly</span></code>? You have every right to be confused! Check out <a class="reference external" href="https://www.merriam-webster.com/words-at-play/on-biweekly-and-bimonthly">Merriam Webster’s dictionary blog</a> for more details if you are curious.</p>
+<p>Names in Python can have letters (upper- and lower-case letters are both okay and count as different letters), underscores, and numbers.  The first character can’t be a number (otherwise a name might look like a number).  And names can’t contain spaces, since spaces are used to separate pieces of code from each other.</p>
+<p>Other than those rules, what you name something doesn’t matter <em>to Python</em>.  For example, this cell does the same thing as the above cell, except everything has a different name:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">840</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">26</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span>
+<span class="n">c</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>However</strong>, names are very important for making your code <em>readable</em> to yourself and others.  The cell above is shorter, but it’s totally useless without an explanation of what it does.</p>
+</div>
+<div class="section" id="calling-functions">
+<h1>4. Calling functions<a class="headerlink" href="#calling-functions" title="Permalink to this headline">¶</a></h1>
+<p>The most common way to combine or manipulate values in Python is by calling functions. Python comes with many built-in functions that perform common operations.</p>
+<p>For example, the <code class="docutils literal notranslate"><span class="pre">abs</span></code> function takes a single number as its argument and returns the absolute value of that number.  The absolute value of a number is its distance from 0 on the number line, so <code class="docutils literal notranslate"><span class="pre">abs(5)</span></code> is 5 and <code class="docutils literal notranslate"><span class="pre">abs(-5)</span></code> is also 5.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">abs</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Question 6. (1pt)</strong> Set the variable <code class="docutils literal notranslate"><span class="pre">diff</span></code> equal to the absolute value of the difference between 15 and 128. Check your answer: it should be a positive number and your answer should use the <code class="docutils literal notranslate"><span class="pre">abs</span></code> function.</p>
+<div class="cell tag_q6 docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># make sure that your answer uses the abs function</span>
+<span class="n">diff</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="multiple-arguments">
+<h2>4.1 Multiple arguments<a class="headerlink" href="#multiple-arguments" title="Permalink to this headline">¶</a></h2>
+<p>Some functions take multiple arguments, separated by commas. As an example, let’s look at the <code class="docutils literal notranslate"><span class="pre">percentile</span></code> function. The function call</p>
+<p><code class="docutils literal notranslate"><span class="pre">percentile(50,[4,2,3,5])</span></code></p>
+<p>computes the smallest number in the collection of numbers inside the brackets that is larger than or equal to  50% of all these numbers. Note that 50% of 4 numbers is 2 numbers, so we are looking for the smallest number among 4, 3, 2, and 5 that is larger than or equal to 2 of the numbers. Ordering the numbers in increasing order, it is easy to see that the number 3 is larger than or equal to 2 of the numbers (2 and 3) and it is the smallest such number. We say that 3 is the 50th percentile of the list of numbers 4, 2, 3 and 5.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">percentile</span></code> function is part of the <code class="docutils literal notranslate"><span class="pre">datascience</span></code> package of functions. Before we can call the <code class="docutils literal notranslate"><span class="pre">percentile</span></code> function, we need to import the <code class="docutils literal notranslate"><span class="pre">datascience</span></code> package. And before we can import the <code class="docutils literal notranslate"><span class="pre">datascience</span></code> package, we need to install it on our computer since it doesn’t come preloaded in Anaconda Python. Fortunately, we only need to install the <code class="docutils literal notranslate"><span class="pre">datascience</span></code> package once (ever) on our computer. To do this, run the code in the following cell. You’ll need an active internet connection. The command may take a minute or two to complete and it may print a fair bit of text to the screen, which you can ignore.</p>
+<div class="cell tag_skip docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We only run the code in the following cell once. </span>
+<span class="c1"># You&#39;ll never have to pip install the datascience package again! </span>
+<span class="c1"># WARNING: This may take a minute or two and may print some odd text to the screen.</span>
+<span class="c1"># If you get a pink WARNING box with a message about upgrading, you can ignore it. </span>
+<span class="o">!</span> pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org datascience
+</pre></div>
+</div>
+</div>
+</div>
+<p>In contrast to the code we just ran, we’ll run the following <code class="docutils literal notranslate"><span class="pre">import</span></code> command once in every Python notebook before we use any of the functions in the <code class="docutils literal notranslate"><span class="pre">datascience</span></code> package. Since we’ll be using the <code class="docutils literal notranslate"><span class="pre">datascience</span></code> package in almost all of our notebooks, this will become routine. It may take a few seconds to run the code in the following cell.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We run the code in this cell in each notebook to allow us to use all the functions </span>
+<span class="c1"># in the datascience package.</span>
+<span class="kn">from</span> <span class="nn">datascience</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we are ready to run the <code class="docutils literal notranslate"><span class="pre">percentile</span></code> command!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">percentile</span><span class="p">(</span><span class="mi">50</span><span class="p">,[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The percentile command gave us the answer that we expected! Let’s find the 51st percentile:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">percentile</span><span class="p">(</span><span class="mi">51</span><span class="p">,[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>It is worth thinking carefully about the reason that <code class="docutils literal notranslate"><span class="pre">percentile(51,[4,3,2,5])</span></code> is 4.</p>
+<ul class="simple">
+<li><p>The number 2 is larger than or equal to 1 of the four numbers, so it is larger than or equal to 25% of the numbers.</p></li>
+<li><p>The number 3 is larger than or equal to 2 of the four numbers, so it is larger than or equal to 50% of the numbers.</p></li>
+<li><p>The number 4 is larger than or equal to 3 of the four numbers, so it is larger than or equal to 75% of the numbers.</p></li>
+<li><p>The number 5 is larger than or equal to 4 of the four numbers, so it is larger than or equal to 100% of the numbers.</p></li>
+</ul>
+<p>We wanted the smallest number that is larger than 51 percent of the numbers. That number isn’t 2 because 2 is only larger than 25% of the numbers. That number isn’t 3 because 3 is only larger than 50% of the numbers. The number 4 is larger than 75% of the numbers (and hence larger than 51% of the numbers) and it is the smallest of the four numbers that has this property (5 is also larger than 51% of the numbers but it is not the smallest such number), so the 51st percentile of the four numbers is 4.</p>
+<p>In the next 3 cells we find the 70th, 75th and 76th percentiles of the collection of four numbers. Before running the code in each cell, try to predict what the <code class="docutils literal notranslate"><span class="pre">percentile</span></code> command will produce.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> <span class="n">percentile</span><span class="p">(</span><span class="mi">70</span><span class="p">,[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">percentile</span><span class="p">(</span><span class="mi">75</span><span class="p">,[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">percentile</span><span class="p">(</span><span class="mi">76</span><span class="p">,[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Question 7. (1 pt)</strong> Set the variable named <code class="docutils literal notranslate"><span class="pre">perc</span></code> equal to the 80th percentile of the numbers 1, 2, 4, 6, and 9.</p>
+<div class="cell tag_q7 docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">perc</span> <span class="o">=</span> <span class="n">percentile</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span> <span class="c1"># fill in the ... spots with the appropriate code (Hint: mimic the cell above)</span>
+<span class="n">perc</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="application-inequality-in-the-usa">
+<h2>4.2. Application: Inequality in the USA.<a class="headerlink" href="#application-inequality-in-the-usa" title="Permalink to this headline">¶</a></h2>
+<p>One of the central issues in American society is the widening gap between the richest people and the average person. This rising level of inequality prompted the <a class="reference external" href="https://en.wikipedia.org/wiki/Occupy_Wall_Street">Occupy Wall Street movement</a>, starting in 2011. The following code loads income data from a random sample of over 68,000 households in the USA in 2019.
+The data has been obtained from the IPUMS-CPS organization (<a class="reference external" href="https://doi.org/10.18128/D030.V6.0">Citation: Sarah Flood, Miriam King, Renae Rodgers, Steven Ruggles and J. Robert Warren. Integrated Public Use Microdata Series, Current Population Survey: Version 6.0 [dataset]. Minneapolis, MN: IPUMS, 2018.</a>). Don’t worry about the code in the next cell, just run it.</p>
+<div class="cell tag__track:income_table docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">income_table</span> <span class="o">=</span> <span class="n">Table</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s2">&quot;HHINCOME_2019.csv&quot;</span><span class="p">)</span>
+<span class="n">income_table</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We extract the numbers from the Income column and store the collection of numbers as <code class="docutils literal notranslate"><span class="pre">incomes</span></code>. Don’t worry about the code in the next cell, just run it.</p>
+<div class="cell tag__track:incomes docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">incomes</span> <span class="o">=</span> <span class="n">income_table</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="s2">&quot;Income&quot;</span><span class="p">)</span>
+<span class="n">incomes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can now compute the 20th percentile of the incomes of our sample:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">percentile</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="n">incomes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Question 8. (2 pts)</strong> Set <code class="docutils literal notranslate"><span class="pre">perc50</span></code> equal to the 50th percentile of the incomes and <code class="docutils literal notranslate"><span class="pre">perc99</span></code> equal to the 99th percentile of the incomes.  Check your answer: the 50th percentile ends in 21 and the 99th percentile ends in 14.</p>
+<div class="cell tag_q8 docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">perc50</span> <span class="o">=</span> <span class="n">percentile</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+<span class="n">perc99</span> <span class="o">=</span> <span class="n">percentile</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The 50th percentile is </span><span class="si">{</span><span class="n">perc50</span><span class="si">}</span><span class="s2"> and the 99th percentile is </span><span class="si">{</span><span class="n">perc99</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span> 
+<span class="c1"># leave the following line alone, we use it for grading purposes</span>
+<span class="n">percs</span> <span class="o">=</span> <span class="p">[</span><span class="n">perc50</span><span class="p">,</span><span class="n">perc99</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The 50th percentile of the incomes is important since it can be interpreted as the income of the average household in our sample. You may want to think about which is higher: the income of the average household or the average income of all households in the US. We’ll come back to this question when we examine skewed distributions later in the course.</p>
+<p>Look back at line 3 in the cell above. By putting the <code class="docutils literal notranslate"><span class="pre">f</span></code> in front of the quotes, we tell Python to replace the expression inside the curly braces (e.g. <code class="docutils literal notranslate"><span class="pre">{perc50}</span></code>) with the value of that expression when printing to the screen. This <strong>formatted print statement</strong> can be very convenient.</p>
+<p><strong>Question 9. (1 point)</strong> Numbers on their own are not informative. You need to dig into the analysis to get a better understanding of the numbers <strong>in context</strong>. We’ll learn how to ask penetrating questions to uncover hidden information in the data. Suppose you are interested in learning how inequality has changed over the last decade. Set the variable <code class="docutils literal notranslate"><span class="pre">helpful</span></code> equal to 1, 2, 3 or 4 to indicate which additional data is most helpful.</p>
+<ol class="simple">
+<li><p>Data about the racial composition of the households in our sample.</p></li>
+<li><p>Similar income data from a large sample of households in the US in 2009.</p></li>
+<li><p>Tax rates for various income ranges in 2019.</p></li>
+<li><p>Education levels for the individuals living in our sample’s households.</p></li>
+</ol>
+<div class="cell tag_q9 docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">helpful</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># replace ... by 1, 2, 3 or 4</span>
+<span class="n">helpful</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We should always think critically about the data that we’re analyzing. For instance, we might ask about how the income data were collected:</p>
+<ul class="simple">
+<li><p>How were the households in the survey selected?</p></li>
+<li><p>Were the households required to participate or did they volunteer?</p></li>
+<li><p>Are the response rates for households linked to some other feature of the household? For example, do single parent households respond less frequently than multi-parent households? This would be an example of <strong>response bias</strong>.</p></li>
+<li><p>Was there financial compensation offered to participate?</p></li>
+<li><p>What efforts were made to ensure that the households were reflective of American society?</p>
+<ul>
+<li><p>Were there efforts to ensure that racial groups were included at levels that reflect their prevalence in the USA?</p></li>
+<li><p>Were there efforts to ensure geographic disparity?</p></li>
+<li><p>Are certain professions over or under-represented in the survey?</p></li>
+</ul>
+</li>
+</ul>
+<p>Let’s look at our income data again:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">income_table</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We have to be aware of <strong>measurement error</strong> in any data analysis. If the data isn’t exact, then the error in the measurements will lead to an error in our analysis. For example, our 50th percentile calculation may not be correct. We’ll learn ways to deal with this kind of uncertainty in our course.</p>
+<p><strong>Question 10. (1 pt)</strong> Set the variable <code class="docutils literal notranslate"><span class="pre">estimated_income</span></code> equal to 1 if you think that some of the income figures in the table are not exact values but rather an estimate of the household income. Set <code class="docutils literal notranslate"><span class="pre">estimated_income</span></code> equal to 2 if you think that all of the income figures in the table are exact values.</p>
+<div class="cell tag_q10 docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">estimated_income</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># replace ... with 1 or 2</span>
+<span class="n">estimated_income</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You’re done with Lab 00!  Choose <strong>Save and Checkpoint</strong> from the <strong>File</strong> menu, then choose <strong>Close and Halt</strong> from the <strong>File</strong> menu. Then upload your file to Blackboard. <strong>Upload only one file per group. Also ensure that you are uploading the LASTNAMES file from your usual directory and not the one from the checkpoints subdirectory (you don’t want to upload the backup file).</strong></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Day 02/Lab 00/old lab 00"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Prof. Will Traves<br/>
+        
+            &copy; Copyright None.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

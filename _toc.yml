@@ -13,3 +13,6 @@ parts:
     chapters:
     - file: Day 01/Lecture Notes/Class Notes Day 01.ipynb
     - file: Day 01/Reading For Next Class/Reading.ipynb
+  - caption: Day 02
+    chapters:
+    - file: Day 02/Website Files/lab 00-LASTNAMES.ipynb
