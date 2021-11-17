@@ -1,0 +1,1030 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEAL GRADER: An automated grading system &#8212; SM217 Introduction to Data Science</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/trident_colors.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SM217 Introduction to Data Science</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../intro.html">
+   SM217: Introduction to Data Science
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Prior to Day 01
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../Day%2001/Python%20Installation%20-%20To%20Do%20Prior%20To%20Class/Python%20Installation%20Instructions%20-%20To%20do%20prior%20to%20class.html">
+   1. Python Installation Instructions
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Day 01
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../Day%2001/Lecture%20Notes/Class%20Notes%20Day%2001.html">
+   2. Day 01 Lecture Notes: Data Science for Decision Makers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../Day%2001/Reading%20For%20Next%20Class/Reading.html">
+   3. Reading for Next Class: Introduction to Data Science and Percentiles
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Day 02
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Website%20Files/lab%2000-LASTNAMES.html">
+   4. Lab 00: Your First Data Science Notebook
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/Day 02/Lab 00/Testing/SEAL_grader.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FDay 02/Lab 00/Testing/SEAL_grader.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Day 02/Lab 00/Testing/SEAL_grader.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   SEAL GRADER: An automated grading system
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#appendix-setting-up-an-assignment">
+   Appendix: Setting up an Assignment
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="seal-grader-an-automated-grading-system">
+<h1>SEAL GRADER: An automated grading system<a class="headerlink" href="#seal-grader-an-automated-grading-system" title="Permalink to this headline">¶</a></h1>
+<p>By Prof. Will Traves (USNA)</p>
+<p>STEP A:
+To use the autograder, first make a folder and store the following files in that folder:<br />
+(1) This file<br />
+(2) The …SOLUTIONS.ipynb file to the assignment<br />
+(3) The …LASTNAME(S).ipynb file to the assignment<br />
+(4) The downloaded student …ipynb files from Blackboard<br />
+(5) A blank Excel file called grading_data.xlsx<br />
+(6) An Excel file containing the word Alphas in cell A1 and the alphas of midshipmen in your class in cells A2 and below. It is best if this file also contains the first names of the midshipmen in column C (starting in C2). Or you can enter MIDN Jones in that cell if you address MIDN Felix Jones as MIDN Jones. CAREFUL: The autograder will eventually overwrite any material in column B next to the alphas.</p>
+<p>STEP B:
+Open both files (5) and (6) and run the cell below.</p>
+<p>The autograder will populate the grading_data.xlsx file with various data. Most of this includes material that is already
+graded but it will also include questions that need to be manually graded. These tend to be text answers that can’t be
+easily graded by the computer or pictures (e.g. a histogram). You’ll need to complete the rows in the spreadsheet labeled
+q…:credit by assigning a grade to each of these questions. When you first look at the spreadsheet after allowing the
+autograder to complete writing to the file, type CTRL-A (to select all) and then hit the button for WRAP TEXT (roughly about
+40% of the way to the right, on the Home ribbon.) Save the completed Excel file.</p>
+<p>STEP C:
+Replace … in the next cell with your Excel file’s name (file 6, above) where you want the grades to be written. Run
+the cell and wait for your grades to appear in the proper location.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;Agg&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">datascience</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">os</span> <span class="k">as</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">xlwings</span> <span class="k">as</span> <span class="nn">xw</span>
+<span class="kn">import</span> <span class="nn">nbformat</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span> 
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">binom</span>
+
+<span class="k">def</span> <span class="nf">ellipses_present</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;return True if ... is in a non-commented part of the code string s&quot;&quot;&quot;</span>
+    <span class="n">s1</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># one element for eachc line in the string s</span>
+    <span class="n">s2</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">s1</span><span class="p">]</span> <span class="c1"># replace each line with the part of the string to the left of the # </span>
+    <span class="n">s3</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;...&#39;</span> <span class="ow">in</span> <span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">s2</span><span class="p">]</span> <span class="c1"># element will be True if ... present</span>
+    <span class="k">return</span> <span class="nb">any</span><span class="p">(</span><span class="n">s3</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">seal_grader</span><span class="p">(</span><span class="n">single_file</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Runs the autograder. This file should be in the same directory as the two input files and the </span>
+<span class="sd">    assignments downloaded from Blackboard.</span>
+<span class="sd">    </span>
+<span class="sd">    Grades will appear in mids_file (first Column should have header Alphas and mids alphas</span>
+<span class="sd">    should appear below in the order that is convenient for gradebook entry).  </span>
+<span class="sd">    </span>
+<span class="sd">    The file spreadsheet_file is an Excel file with responses available for fast manual grading. It will include </span>
+<span class="sd">    all the automatically graded questions too. </span>
+<span class="sd">    </span>
+<span class="sd">    If you want to run the autograder on all the files in the current directory, don&#39;t enter any arguments. If you </span>
+<span class="sd">    only want to run the autograder on a single file, then enter the file name in quotes (file name only, no directory info). </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">current_working_directory</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+    <span class="n">spreadsheet_file</span> <span class="o">=</span> <span class="n">current_working_directory</span><span class="o">+</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">grading_data.xlsx&#39;</span>
+    <span class="n">wbss</span> <span class="o">=</span> <span class="n">xw</span><span class="o">.</span><span class="n">Book</span><span class="p">(</span><span class="n">spreadsheet_file</span><span class="p">)</span>
+    <span class="n">sht</span> <span class="o">=</span> <span class="n">wbss</span><span class="o">.</span><span class="n">sheets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    
+    <span class="k">if</span> <span class="n">single_file</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">list_of_nbs</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">current_working_directory</span><span class="p">)</span> <span class="k">if</span> <span class="n">f</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">:]</span><span class="o">==</span><span class="s1">&#39;ipynb&#39;</span> 
+                       <span class="ow">and</span> <span class="n">f</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s1">&#39;LASTNAME&#39;</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">f</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s1">&#39;SOLUTIONS&#39;</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">0</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">50</span> 
+                       <span class="ow">and</span> <span class="n">f</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s1">&#39;grader&#39;</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">f</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s1">&#39;LitC&#39;</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span> 
+        <span class="n">list_of_nbs</span> <span class="o">=</span> <span class="p">[</span><span class="n">current_working_directory</span><span class="o">+</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span><span class="o">+</span><span class="n">single_file</span><span class="p">]</span>
+    <span class="n">solutions_file</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">current_working_directory</span><span class="p">)</span> <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s1">&#39;SOLUTIONS&#39;</span><span class="p">)</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">gi</span> <span class="o">=</span> <span class="n">get_answers</span><span class="p">(</span><span class="n">solutions_file</span><span class="p">)</span>
+    <span class="n">set_up_spreadsheet</span><span class="p">(</span><span class="n">spreadsheet_file</span><span class="p">,</span><span class="n">gi</span><span class="p">)</span>
+    <span class="n">current_cell</span> <span class="o">=</span> <span class="s1">&#39;C2&#39;</span>
+    
+    <span class="n">skip_files</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">response_file</span> <span class="ow">in</span> <span class="n">list_of_nbs</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">gr</span> <span class="o">=</span> <span class="n">get_responses</span><span class="p">(</span><span class="n">response_file</span><span class="p">,</span><span class="n">gi</span><span class="p">)</span>
+            <span class="n">process_responses</span><span class="p">(</span><span class="n">gr</span><span class="p">,</span><span class="n">gi</span><span class="p">,</span><span class="n">spreadsheet_file</span><span class="p">,</span><span class="n">current_cell</span><span class="p">)</span>
+            <span class="n">update_cell</span> <span class="o">=</span> <span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="n">current_cell</span><span class="p">)</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">cola</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">update_cell</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;$&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">rowa</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">update_cell</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;$&#39;</span><span class="p">)[</span><span class="mi">2</span><span class="p">][:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">current_cell</span> <span class="o">=</span> <span class="n">cola</span><span class="o">+</span><span class="n">rowa</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RAN INTO SERIOUS ERROR IN </span><span class="si">{</span><span class="n">response_file</span><span class="si">}</span><span class="s2">. SKIPPING file and continuing.&quot;</span><span class="p">)</span>
+            <span class="n">skip_files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">response_file</span><span class="p">)</span>
+            
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">skip_files</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">response_file</span> <span class="ow">in</span> <span class="n">skip_files</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;We skipped </span><span class="si">{</span><span class="n">response_file</span><span class="si">}</span><span class="s1"> in grading.&#39;</span><span class="p">)</span>
+            
+<span class="k">def</span> <span class="nf">tally_points</span><span class="p">(</span><span class="n">mids_file</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gathering grading data.&quot;</span><span class="p">)</span>
+    <span class="n">current_working_directory</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+    <span class="n">spreadsheet_file</span> <span class="o">=</span> <span class="n">current_working_directory</span><span class="o">+</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">grading_data.xlsx&#39;</span>
+    <span class="n">mids_grades</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">wb</span> <span class="o">=</span> <span class="n">xw</span><span class="o">.</span><span class="n">Book</span><span class="p">(</span><span class="n">spreadsheet_file</span><span class="p">)</span>
+    <span class="n">sht</span> <span class="o">=</span> <span class="n">wb</span><span class="o">.</span><span class="n">sheets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">titles</span> <span class="o">=</span> <span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="s1">&#39;down&#39;</span><span class="p">)</span>
+    <span class="n">offs_list_for_credit</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A2&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">offs</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">titles</span><span class="p">)):</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="n">offs</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">title</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">title</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;Subtotal&#39;</span><span class="p">:</span>
+                <span class="n">offs_subtotal</span> <span class="o">=</span> <span class="n">offs</span>
+            <span class="k">elif</span> <span class="n">title</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;Early bonus&#39;</span><span class="p">:</span>
+                <span class="n">offs_early_bonus</span> <span class="o">=</span> <span class="n">offs</span>
+            <span class="k">elif</span> <span class="n">title</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;Late penalty&#39;</span><span class="p">:</span>
+                <span class="n">offs_late_penalty</span> <span class="o">=</span> <span class="n">offs</span>
+            <span class="k">elif</span> <span class="n">title</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;Total&#39;</span><span class="p">:</span>
+                <span class="n">offs_total</span> <span class="o">=</span> <span class="n">offs</span>
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">title</span><span class="p">)</span><span class="o">==</span><span class="mi">2</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">title</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;credit&#39;</span><span class="p">:</span>
+                <span class="n">offs_list_for_credit</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">offs</span><span class="p">)</span>
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;C2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
+    <span class="n">num_submissions</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">rng</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tallying grades on grading document.&quot;</span><span class="p">)</span>
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;C2&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">subm</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_submissions</span><span class="p">):</span>
+        <span class="n">cred</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">offs</span> <span class="ow">in</span> <span class="n">offs_list_for_credit</span><span class="p">:</span>
+            <span class="n">cred</span> <span class="o">+=</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="n">offs</span><span class="p">,</span><span class="n">subm</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+        <span class="n">cred</span> <span class="o">+=</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="n">offs_early_bonus</span><span class="p">,</span><span class="n">subm</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+        <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="n">offs_subtotal</span><span class="p">,</span><span class="n">subm</span><span class="p">)</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">cred</span>
+        <span class="k">if</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="n">offs_late_penalty</span><span class="p">,</span><span class="n">subm</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="o">==</span><span class="s1">&#39;no penalty&#39;</span> <span class="ow">or</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="n">offs_late_penalty</span><span class="p">,</span><span class="n">subm</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="n">offs_late_penalty</span><span class="p">,</span><span class="n">subm</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="o">=</span><span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="n">offs_late_penalty</span><span class="p">,</span><span class="n">subm</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="o">=-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">cred</span>
+            <span class="n">cred</span> <span class="o">=</span> <span class="mf">0.75</span><span class="o">*</span><span class="n">cred</span>
+        <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="n">offs_total</span><span class="p">,</span><span class="n">subm</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="o">=</span><span class="n">cred</span>
+        <span class="k">for</span> <span class="n">alpha</span> <span class="ow">in</span> <span class="nb">eval</span><span class="p">(</span><span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">subm</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">):</span>
+            <span class="n">mids_grades</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">alpha</span><span class="p">)]</span> <span class="o">=</span> <span class="n">cred</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Printing grades to spreadsheet.&quot;</span><span class="p">)</span>
+    <span class="n">wb2</span> <span class="o">=</span> <span class="n">xw</span><span class="o">.</span><span class="n">Book</span><span class="p">(</span><span class="n">mids_file</span><span class="p">)</span>
+    <span class="n">sht2</span> <span class="o">=</span> <span class="n">wb2</span><span class="o">.</span><span class="n">sheets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">alphas_list</span> <span class="o">=</span> <span class="n">sht2</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="s1">&#39;down&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span> <span class="c1"># note: this breaks if there is only 1 person in the class list</span>
+    <span class="n">alphas_list</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">alpha</span><span class="p">))</span> <span class="k">for</span> <span class="n">alpha</span> <span class="ow">in</span> <span class="n">alphas_list</span><span class="p">]</span>
+    <span class="n">grades_list</span> <span class="o">=</span> <span class="n">sht2</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;B2&#39;</span><span class="p">,</span><span class="sa">f</span><span class="s1">&#39;B</span><span class="si">{</span><span class="mi">1</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">alphas_list</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+    <span class="n">alphas_in_grades</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">alpha</span><span class="p">)</span> <span class="k">for</span> <span class="n">alpha</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">mids_grades</span><span class="o">.</span><span class="n">keys</span><span class="p">())]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">alphas_list</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">alphas_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="n">alphas_in_grades</span><span class="p">:</span> <span class="c1"># need to update grade</span>
+            <span class="n">grades_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span> <span class="n">mids_grades</span><span class="p">[</span><span class="n">alphas_list</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+    <span class="n">solutions_file</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">current_working_directory</span><span class="p">)</span> <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s1">&#39;SOLUTIONS&#39;</span><span class="p">)</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">assn_name</span> <span class="o">=</span> <span class="n">solutions_file</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">sht2</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;B1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">assn_name</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="n">offs_total</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+    <span class="n">grades_list</span> <span class="o">=</span> <span class="p">[[</span><span class="n">gr</span><span class="p">]</span> <span class="k">for</span> <span class="n">gr</span> <span class="ow">in</span> <span class="n">grades_list</span><span class="p">]</span>
+    <span class="n">sht2</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;B2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">grades_list</span>
+
+    
+
+<span class="k">def</span> <span class="nf">short_string</span><span class="p">(</span><span class="n">instring</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">instring</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">600</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">instring</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">instring</span><span class="p">[:</span><span class="mi">300</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot; ... &quot;</span><span class="o">+</span><span class="n">instring</span><span class="p">[</span><span class="o">-</span><span class="mi">300</span><span class="p">:]</span>
+    
+<span class="k">def</span> <span class="nf">process_responses</span><span class="p">(</span><span class="n">responses</span><span class="p">,</span><span class="n">grading_information</span><span class="p">,</span><span class="n">file</span><span class="p">,</span><span class="n">current_cell</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Process student responses, storing in a spreadsheet for further work &quot;&quot;&quot;</span>
+    <span class="n">wb</span> <span class="o">=</span> <span class="n">xw</span><span class="o">.</span><span class="n">Book</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="n">sht</span> <span class="o">=</span> <span class="n">wb</span><span class="o">.</span><span class="n">sheets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="n">current_cell</span><span class="p">)</span>
+    <span class="n">rng</span><span class="o">.</span><span class="n">column_width</span><span class="o">=</span><span class="mi">25</span>
+    <span class="n">rng</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">responses</span><span class="p">[</span><span class="s1">&#39;alphas&#39;</span><span class="p">])</span>
+    <span class="n">gik</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">responses</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="n">gik</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;alphas&#39;</span><span class="p">)</span>
+    <span class="n">gik</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;early&#39;</span><span class="p">)</span>
+    <span class="n">gik</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;late&#39;</span><span class="p">)</span>
+    <span class="n">num_questions</span> <span class="o">=</span> <span class="nb">max</span><span class="p">([</span><span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">gik</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">num_questions</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">rng</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">rng</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">responses</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)][</span><span class="s1">&#39;credit&#39;</span><span class="p">]</span>
+        <span class="n">rng</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">rng</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">responses</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)][</span><span class="s1">&#39;points&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">&#39;answer&#39;</span> <span class="ow">in</span> <span class="n">grading_information</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">rng</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">rng</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">short_string</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">responses</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)][</span><span class="s1">&#39;response&#39;</span><span class="p">]))</span>
+        <span class="k">if</span> <span class="s1">&#39;picture&#39;</span> <span class="ow">in</span> <span class="n">grading_information</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)][</span><span class="s1">&#39;type&#39;</span><span class="p">]:</span>
+            <span class="n">rng</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">rng</span><span class="o">.</span><span class="n">row_height</span><span class="o">=</span><span class="mi">130</span>
+            <span class="k">if</span> <span class="n">responses</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)][</span><span class="s1">&#39;response_file&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;no answer&quot;</span><span class="p">:</span>
+                <span class="n">sht</span><span class="o">.</span><span class="n">pictures</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">responses</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)][</span><span class="s1">&#39;response_file&#39;</span><span class="p">],</span> <span class="n">top</span><span class="o">=</span><span class="n">rng</span><span class="o">.</span><span class="n">top</span><span class="o">+</span><span class="mi">5</span><span class="p">,</span> <span class="n">left</span><span class="o">=</span><span class="n">rng</span><span class="o">.</span><span class="n">left</span><span class="o">+</span><span class="mi">5</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">120</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;code&#39;</span> <span class="ow">in</span> <span class="n">responses</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">rng</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">rng</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">responses</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)][</span><span class="s1">&#39;code&#39;</span><span class="p">])</span>
+        <span class="n">rng</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># skip down to avoid writing in the feedback cell</span>
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">rng</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">responses</span><span class="p">[</span><span class="s1">&#39;early&#39;</span><span class="p">])</span> <span class="c1"># 1 bonus point if early</span>
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">rng</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Subtotal&#39;</span>
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">responses</span><span class="p">[</span><span class="s1">&#39;late&#39;</span><span class="p">]:</span>
+        <span class="n">late_multiplier</span> <span class="o">=</span> <span class="s1">&#39;-25 percent&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">late_multiplier</span> <span class="o">=</span> <span class="s1">&#39;no penalty&#39;</span>
+    <span class="n">rng</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">late_multiplier</span>
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">rng</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Total&#39;</span>
+    
+<span class="k">def</span> <span class="nf">set_up_spreadsheet</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">grading_information</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Set up the spreadsheet to receive grades data &quot;&quot;&quot;</span>
+    <span class="n">wb</span> <span class="o">=</span> <span class="n">xw</span><span class="o">.</span><span class="n">Book</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="n">sht</span> <span class="o">=</span> <span class="n">wb</span><span class="o">.</span><span class="n">sheets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span>
+    <span class="n">rng</span><span class="o">.</span><span class="n">column_width</span><span class="o">=</span><span class="mi">12</span>
+    <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">column_width</span><span class="o">=</span><span class="mi">28</span>
+    <span class="n">rng</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Row value&#39;</span>
+    <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Solutions&#39;</span>
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">rng</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Alphas&#39;</span>
+    <span class="n">gik</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">grading_information</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="n">gik</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;dates&#39;</span><span class="p">)</span>
+    <span class="n">num_questions</span> <span class="o">=</span> <span class="nb">max</span><span class="p">([</span><span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">gik</span><span class="p">])</span>
+    <span class="n">total_score</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">num_questions</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Setting up spreadsheet: Question </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">rng</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">rng</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;q</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="s1">:credit&#39;</span>
+        <span class="n">rng</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">rng</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;q</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="s1">:points&#39;</span>
+        <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">grading_information</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)][</span><span class="s1">&#39;points&#39;</span><span class="p">]</span>
+        <span class="n">total_score</span> <span class="o">+=</span> <span class="n">grading_information</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)][</span><span class="s1">&#39;points&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">&#39;answer&#39;</span> <span class="ow">in</span> <span class="n">grading_information</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">rng</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">rng</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;q</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="s1">:answer&#39;</span>
+            <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">grading_information</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)][</span><span class="s1">&#39;answer&#39;</span><span class="p">])</span>
+        <span class="k">if</span> <span class="s1">&#39;picture&#39;</span> <span class="ow">in</span> <span class="n">grading_information</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)][</span><span class="s1">&#39;type&#39;</span><span class="p">]:</span>
+            <span class="n">rng</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">rng</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;q</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="s1">:answer&#39;</span>
+            <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">row_height</span><span class="o">=</span><span class="mi">130</span>
+            <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">column_width</span><span class="o">=</span><span class="mi">25</span>
+            <span class="n">sht</span><span class="o">.</span><span class="n">pictures</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">grading_information</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)][</span><span class="s1">&#39;file&#39;</span><span class="p">],</span> <span class="n">top</span><span class="o">=</span><span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">top</span><span class="o">+</span><span class="mi">5</span><span class="p">,</span> <span class="n">left</span><span class="o">=</span><span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">left</span><span class="o">+</span><span class="mi">5</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">120</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;code&#39;</span> <span class="ow">in</span> <span class="n">grading_information</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">rng</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">rng</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;q</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="s1">:code&#39;</span>
+            <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">grading_information</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)][</span><span class="s1">&#39;code&#39;</span><span class="p">])</span>
+        <span class="n">rng</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">rng</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;q</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="s1">:feedback&#39;</span>
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">rng</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Early bonus&#39;</span>
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">rng</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Subtotal&#39;</span>
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">rng</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Late penalty&#39;</span>
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">rng</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Total&#39;</span>
+    <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">total_score</span>
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">rng</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Feedback&#39;</span>
+
+    
+<span class="k">def</span> <span class="nf">get_date_from_file</span><span class="p">(</span><span class="n">file_name</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;return month and day of submission e.g. (3,12) for March 12&quot;&quot;&quot;</span> 
+    <span class="n">date</span> <span class="o">=</span> <span class="n">file_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)[</span><span class="mi">3</span><span class="p">][:</span><span class="mi">10</span><span class="p">]</span>
+    <span class="k">return</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">date</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">7</span><span class="p">]),</span><span class="nb">int</span><span class="p">(</span><span class="n">date</span><span class="p">[</span><span class="mi">8</span><span class="p">:]))</span>
+
+<span class="k">def</span> <span class="nf">is_early</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span><span class="n">early_date</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;return true if the file was submitted any time on or before the end of early_date&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">get_date_from_file</span><span class="p">(</span><span class="n">file_name</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">&lt;</span><span class="n">early_date</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">or</span> <span class="p">(</span><span class="n">get_date_from_file</span><span class="p">(</span><span class="n">file_name</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="n">early_date</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">get_date_from_file</span><span class="p">(</span><span class="n">file_name</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">&lt;=</span><span class="n">early_date</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">is_late</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span><span class="n">late_after</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;return true if the file was submitted any time after the late_after date&quot;&quot;&quot;</span>
+    <span class="n">date</span> <span class="o">=</span> <span class="n">get_date_from_file</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">date</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&gt;</span><span class="n">late_after</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">or</span> <span class="p">(</span><span class="n">date</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="n">late_after</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="ow">and</span> <span class="n">date</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;</span><span class="n">late_after</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="k">def</span> <span class="nf">get_responses</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">grading_instructions</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; returns a dictionary with information about the student&#39;s responses &quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">credit</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Getting responses from </span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+    <span class="n">my_notebook</span> <span class="o">=</span> <span class="n">nbformat</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">as_version</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span> 
+    <span class="n">response_information</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">response_information</span><span class="p">[</span><span class="s1">&#39;early&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">is_early</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">grading_instructions</span><span class="p">[</span><span class="s1">&#39;dates&#39;</span><span class="p">][</span><span class="s1">&#39;early_date&#39;</span><span class="p">])</span>
+    <span class="n">response_information</span><span class="p">[</span><span class="s1">&#39;late&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">is_late</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">grading_instructions</span><span class="p">[</span><span class="s1">&#39;dates&#39;</span><span class="p">][</span><span class="s1">&#39;late_after&#39;</span><span class="p">])</span>
+    
+    <span class="n">num_cells</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">my_notebook</span><span class="o">.</span><span class="n">cells</span><span class="p">)</span> <span class="c1"># number of cells in the notebook</span>
+    <span class="k">for</span> <span class="n">cell_num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_cells</span><span class="p">):</span>
+        <span class="n">cell</span> <span class="o">=</span> <span class="n">my_notebook</span><span class="o">.</span><span class="n">cells</span><span class="p">[</span><span class="n">cell_num</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">&#39;tags&#39;</span> <span class="ow">in</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;metadata&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>    <span class="c1"># first check that there *are* tags on the cell            </span>
+            <span class="n">tags</span> <span class="o">=</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;metadata&#39;</span><span class="p">][</span><span class="s1">&#39;tags&#39;</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">ellipses_present</span><span class="p">(</span><span class="n">cell</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">]):</span>
+                        <span class="k">pass</span>
+            <span class="k">else</span><span class="p">:</span> 
+                <span class="n">varnamelist</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span><span class="p">[</span><span class="mi">7</span><span class="p">:]</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="p">[</span><span class="n">ts</span> <span class="k">for</span> <span class="n">ts</span> <span class="ow">in</span> <span class="n">tags</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span><span class="o">&gt;=</span><span class="mi">7</span><span class="p">]</span> <span class="k">if</span> <span class="n">t</span><span class="p">[:</span><span class="mi">7</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;_track:&#39;</span><span class="p">]</span> 
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">varnamelist</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span> <span class="c1"># need to track at least one variable</span>
+                    <span class="k">for</span> <span class="n">varname</span> <span class="ow">in</span> <span class="n">varnamelist</span><span class="p">:</span>
+                        <span class="n">pre</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;global </span><span class="si">{</span><span class="n">varname</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span>
+                        <span class="k">try</span><span class="p">:</span> 
+                            <span class="n">exec</span><span class="p">(</span><span class="n">pre</span> <span class="o">+</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">],</span><span class="nb">globals</span><span class="p">(),</span><span class="nb">locals</span><span class="p">())</span> 
+                        <span class="k">except</span><span class="p">:</span>
+                            <span class="k">pass</span>   
+            <span class="c1"># see if there is a qxx tag on the cell</span>
+            <span class="n">qlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">tags</span> <span class="k">if</span> <span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;q&#39;</span><span class="p">]</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">qlist</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+                <span class="n">qnum</span> <span class="o">=</span> <span class="n">qlist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">qnum</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">if</span> <span class="s1">&#39;_alphas&#39;</span> <span class="ow">in</span> <span class="n">tags</span><span class="p">:</span> <span class="c1"># get list of midshipmen&#39;s alphas</span>
+                <span class="k">global</span> <span class="n">alphas</span>
+                <span class="n">alphas</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="k">if</span> <span class="n">ellipses_present</span><span class="p">(</span><span class="n">cell</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">]):</span> 
+                    <span class="n">alphas</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100001</span><span class="p">]</span> <span class="c1"># code for no alphas entered</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">exec</span><span class="p">(</span><span class="s2">&quot;global alphas</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">+</span><span class="n">cell</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">],</span><span class="nb">globals</span><span class="p">(),</span><span class="nb">locals</span><span class="p">())</span>
+                <span class="n">response_information</span><span class="p">[</span><span class="s1">&#39;alphas&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">globals</span><span class="p">()[</span><span class="s1">&#39;alphas&#39;</span><span class="p">]</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Processing submission by MIDN in </span><span class="si">{</span><span class="n">response_information</span><span class="p">[</span><span class="s1">&#39;alphas&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="s1">&#39;skip&#39;</span> <span class="ow">in</span> <span class="n">tags</span> <span class="ow">and</span> <span class="n">qnum</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span> <span class="c1"># then check for a skip tag; use this to pass on running cells that produce errors</span>
+                <span class="c1"># for student answer cells we&#39;ll remove those tags when we make the lastnames file</span>
+                <span class="k">pass</span>
+            <span class="k">elif</span> <span class="n">qnum</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span> 
+                <span class="n">qtype</span> <span class="o">=</span> <span class="n">grading_instructions</span><span class="p">[</span><span class="n">qnum</span><span class="p">][</span><span class="s1">&#39;type&#39;</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">qtype</span> <span class="o">==</span> <span class="s1">&#39;special-code&#39;</span><span class="p">:</span>
+                    <span class="n">pts</span> <span class="o">=</span> <span class="n">grading_instructions</span><span class="p">[</span><span class="n">qnum</span><span class="p">][</span><span class="s1">&#39;points&#39;</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;cell_type&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;code&#39;</span><span class="p">:</span>
+                        <span class="k">try</span><span class="p">:</span> 
+                            <span class="n">exec</span><span class="p">(</span><span class="n">cell</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">],</span><span class="nb">globals</span><span class="p">(),</span><span class="nb">locals</span><span class="p">())</span>
+                        <span class="k">except</span><span class="p">:</span>
+                            <span class="k">pass</span>
+                    <span class="k">try</span><span class="p">:</span> 
+                        <span class="n">exec</span><span class="p">(</span><span class="n">grading_instructions</span><span class="p">[</span><span class="n">qnum</span><span class="p">][</span><span class="s1">&#39;code_for_credit&#39;</span><span class="p">],</span><span class="nb">globals</span><span class="p">(),</span><span class="nb">locals</span><span class="p">())</span>
+                        <span class="n">credit</span> <span class="o">=</span> <span class="nb">globals</span><span class="p">()[</span><span class="s1">&#39;credit&#39;</span><span class="p">]</span>
+                    <span class="k">except</span><span class="p">:</span>
+                        <span class="n">credit</span> <span class="o">=</span> <span class="mi">0</span>
+                    <span class="n">response_information</span><span class="p">[</span><span class="n">qnum</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="n">qtype</span><span class="p">,</span> <span class="s1">&#39;credit&#39;</span><span class="p">:</span> <span class="n">credit</span><span class="p">,</span> <span class="s1">&#39;points&#39;</span><span class="p">:</span> <span class="n">pts</span><span class="p">,</span> <span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">]}</span>
+                <span class="k">elif</span> <span class="n">qtype</span> <span class="o">==</span> <span class="s1">&#39;markdown&#39;</span><span class="p">:</span>
+                    <span class="n">response</span> <span class="o">=</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                    <span class="n">answer</span> <span class="o">=</span> <span class="n">grading_instructions</span><span class="p">[</span><span class="n">qnum</span><span class="p">][</span><span class="s1">&#39;answer&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                    <span class="n">pts</span> <span class="o">=</span> <span class="n">grading_instructions</span><span class="p">[</span><span class="n">qnum</span><span class="p">][</span><span class="s1">&#39;points&#39;</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="n">values_equal</span><span class="p">(</span><span class="n">answer</span><span class="p">,</span><span class="n">response</span><span class="p">):</span>
+                        <span class="n">credit</span> <span class="o">=</span> <span class="n">pts</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">credit</span> <span class="o">=</span> <span class="mi">0</span>
+                    <span class="n">response_information</span><span class="p">[</span><span class="n">qnum</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="n">qtype</span><span class="p">,</span> <span class="s1">&#39;credit&#39;</span><span class="p">:</span> <span class="n">credit</span><span class="p">,</span> <span class="s1">&#39;points&#39;</span><span class="p">:</span> <span class="n">pts</span><span class="p">,</span> 
+                                                  <span class="s1">&#39;response&#39;</span><span class="p">:</span> <span class="n">response</span><span class="p">,</span> <span class="s1">&#39;answer&#39;</span><span class="p">:</span> <span class="n">answer</span> <span class="p">}</span> <span class="c1"># no code for markdown cells</span>
+                <span class="k">elif</span> <span class="n">qtype</span> <span class="o">==</span> <span class="s1">&#39;stdoutput&#39;</span><span class="p">:</span>
+                    <span class="n">outformat</span> <span class="o">=</span> <span class="n">grading_instructions</span><span class="p">[</span><span class="n">qnum</span><span class="p">][</span><span class="s1">&#39;outformat&#39;</span><span class="p">]</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">response</span> <span class="o">=</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;outputs&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="n">outformat</span><span class="p">]</span>
+                    <span class="k">except</span><span class="p">:</span>
+                        <span class="n">response</span> <span class="o">=</span> <span class="s2">&quot;answer produces an error&quot;</span>
+                    <span class="n">newformat</span> <span class="o">=</span> <span class="n">grading_instructions</span><span class="p">[</span><span class="n">qnum</span><span class="p">][</span><span class="s1">&#39;newformat&#39;</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="n">newformat</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+                        <span class="k">try</span><span class="p">:</span>
+                            <span class="n">response</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">newformat</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="n">response</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+                        <span class="k">except</span><span class="p">:</span>
+                            <span class="n">response</span> <span class="o">=</span> <span class="s2">&quot;answer produces an error&quot;</span>
+                    <span class="n">pts</span> <span class="o">=</span> <span class="n">grading_instructions</span><span class="p">[</span><span class="n">qnum</span><span class="p">][</span><span class="s1">&#39;points&#39;</span><span class="p">]</span>
+                    <span class="n">answer</span> <span class="o">=</span> <span class="n">grading_instructions</span><span class="p">[</span><span class="n">qnum</span><span class="p">][</span><span class="s1">&#39;answer&#39;</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="n">values_equal</span><span class="p">(</span><span class="n">response</span><span class="p">,</span><span class="n">answer</span><span class="p">):</span>
+                        <span class="n">credit</span> <span class="o">=</span> <span class="n">pts</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">credit</span> <span class="o">=</span> <span class="mi">0</span>
+                    <span class="n">response_information</span><span class="p">[</span><span class="n">qnum</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="n">qtype</span><span class="p">,</span> <span class="s1">&#39;credit&#39;</span><span class="p">:</span> <span class="n">credit</span><span class="p">,</span> <span class="s1">&#39;points&#39;</span><span class="p">:</span> <span class="n">pts</span><span class="p">,</span> 
+                                                  <span class="s1">&#39;response&#39;</span><span class="p">:</span> <span class="n">response</span><span class="p">,</span> <span class="s1">&#39;answer&#39;</span><span class="p">:</span> <span class="n">answer</span><span class="p">,</span> <span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">]</span> <span class="p">}</span>
+                <span class="k">elif</span> <span class="n">qtype</span> <span class="o">==</span> <span class="s1">&#39;picture&#39;</span><span class="p">:</span>
+                    <span class="n">pts</span> <span class="o">=</span> <span class="n">grading_instructions</span><span class="p">[</span><span class="n">qnum</span><span class="p">][</span><span class="s1">&#39;points&#39;</span><span class="p">]</span>
+                    <span class="n">answer_file</span> <span class="o">=</span> <span class="n">grading_instructions</span><span class="p">[</span><span class="n">qnum</span><span class="p">][</span><span class="s1">&#39;file&#39;</span><span class="p">]</span>
+                    <span class="k">try</span><span class="p">:</span> 
+                        <span class="n">exec</span><span class="p">(</span><span class="n">cell</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">])</span> <span class="c1"># produce response figure</span>
+                        <span class="n">pic_file</span> <span class="o">=</span> <span class="n">answer_file</span><span class="p">[:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">alphas</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;.png&quot;</span>
+                        <span class="n">execstr</span> <span class="o">=</span> <span class="s2">&quot;matplotlib.pyplot.savefig(f&#39;</span><span class="si">{pic_file}</span><span class="s2">&#39;,pad_inches=0.1,bbox_inches=&#39;tight&#39;)&quot;</span>
+                        <span class="n">exec</span><span class="p">(</span><span class="n">execstr</span><span class="p">)</span> <span class="c1"># save image to picfile</span>
+                    <span class="k">except</span><span class="p">:</span>
+                        <span class="n">pic_file</span> <span class="o">=</span> <span class="s2">&quot;no answer&quot;</span>
+                    <span class="n">response_information</span><span class="p">[</span><span class="n">qnum</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="n">qtype</span><span class="p">,</span> <span class="s1">&#39;credit&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;points&#39;</span><span class="p">:</span> <span class="n">pts</span><span class="p">,</span> 
+                                                  <span class="s1">&#39;response_file&#39;</span><span class="p">:</span> <span class="n">pic_file</span> <span class="p">,</span> <span class="s1">&#39;answer_file&#39;</span><span class="p">:</span> <span class="n">answer_file</span><span class="p">,</span>
+                                                   <span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">]}</span>
+                <span class="k">elif</span> <span class="n">qtype</span> <span class="o">==</span> <span class="s1">&#39;var&#39;</span><span class="p">:</span>
+                    <span class="n">pts</span> <span class="o">=</span> <span class="n">grading_instructions</span><span class="p">[</span><span class="n">qnum</span><span class="p">][</span><span class="s1">&#39;points&#39;</span><span class="p">]</span>
+                    <span class="n">varname</span> <span class="o">=</span> <span class="n">grading_instructions</span><span class="p">[</span><span class="n">qnum</span><span class="p">][</span><span class="s1">&#39;varname&#39;</span><span class="p">]</span>
+                    <span class="n">answer</span> <span class="o">=</span> <span class="n">grading_instructions</span><span class="p">[</span><span class="n">qnum</span><span class="p">][</span><span class="s1">&#39;answer&#39;</span><span class="p">]</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">exec</span><span class="p">(</span><span class="s2">&quot;global &quot;</span><span class="o">+</span><span class="n">varname</span><span class="o">+</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">+</span><span class="n">cell</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">],</span><span class="nb">globals</span><span class="p">(),</span><span class="nb">locals</span><span class="p">())</span>
+                        <span class="n">response</span> <span class="o">=</span> <span class="nb">globals</span><span class="p">()[</span><span class="n">varname</span><span class="p">]</span>
+                        <span class="k">if</span> <span class="n">gradeq</span><span class="p">(</span><span class="n">response</span><span class="p">,</span><span class="n">answer</span><span class="p">):</span>
+                            <span class="n">credit</span> <span class="o">=</span> <span class="n">pts</span>
+                        <span class="k">else</span><span class="p">:</span>
+                            <span class="n">credit</span> <span class="o">=</span> <span class="mi">0</span>
+                    <span class="k">except</span><span class="p">:</span>
+                        <span class="n">credit</span> <span class="o">=</span> <span class="mi">0</span>
+                    <span class="n">response_information</span><span class="p">[</span><span class="n">qnum</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="n">qtype</span><span class="p">,</span> <span class="s1">&#39;credit&#39;</span><span class="p">:</span> <span class="n">credit</span><span class="p">,</span> <span class="s1">&#39;points&#39;</span><span class="p">:</span> <span class="n">pts</span><span class="p">,</span> 
+                                                  <span class="s1">&#39;response&#39;</span><span class="p">:</span> <span class="n">response</span><span class="p">,</span> <span class="s1">&#39;answer&#39;</span><span class="p">:</span> <span class="n">answer</span><span class="p">,</span> <span class="s1">&#39;varname&#39;</span><span class="p">:</span> <span class="n">varname</span><span class="p">,</span>
+                                                 <span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">]}</span>
+            <span class="k">else</span><span class="p">:</span> 
+                <span class="k">if</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;cell_type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="c1"># just run the cell</span>
+                    <span class="k">if</span> <span class="n">ellipses_present</span><span class="p">(</span><span class="n">cell</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">]):</span>
+                        <span class="k">pass</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">exec</span><span class="p">(</span><span class="n">cell</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">response_information</span>
+
+<span class="k">def</span> <span class="nf">get_answers</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; returns a dictionary with important information about the answers and how to process the student submissions &quot;&quot;&quot;</span> 
+    <span class="n">my_notebook</span> <span class="o">=</span> <span class="n">nbformat</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">as_version</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span> 
+    <span class="n">grading_instructions</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">my_notebook</span><span class="o">.</span><span class="n">cells</span><span class="p">:</span>
+        <span class="k">if</span> <span class="s1">&#39;tags&#39;</span> <span class="ow">in</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;metadata&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>    <span class="c1"># first check that there *are* tags on the cell            </span>
+            <span class="n">tags</span> <span class="o">=</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;metadata&#39;</span><span class="p">][</span><span class="s1">&#39;tags&#39;</span><span class="p">]</span>
+            <span class="n">varnamelist</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span><span class="p">[</span><span class="mi">7</span><span class="p">:]</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="p">[</span><span class="n">ts</span> <span class="k">for</span> <span class="n">ts</span> <span class="ow">in</span> <span class="n">tags</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span><span class="o">&gt;=</span><span class="mi">7</span><span class="p">]</span> <span class="k">if</span> <span class="n">t</span><span class="p">[:</span><span class="mi">7</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;_track:&#39;</span><span class="p">]</span> 
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">varnamelist</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span> <span class="c1"># need to track at least one variable</span>
+                <span class="k">for</span> <span class="n">varname</span> <span class="ow">in</span> <span class="n">varnamelist</span><span class="p">:</span> 
+                    <span class="n">pre</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;global </span><span class="si">{</span><span class="n">varname</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span>
+                    <span class="k">try</span><span class="p">:</span> 
+                        <span class="n">exec</span><span class="p">(</span><span class="n">pre</span> <span class="o">+</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">],</span><span class="nb">globals</span><span class="p">(),</span><span class="nb">locals</span><span class="p">())</span> <span class="c1"># I&#39;m not convinced this works when varname is a function</span>
+                    <span class="k">except</span><span class="p">:</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;COULDN&#39;T DEFINE </span><span class="si">{</span><span class="n">varname</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+                        <span class="k">pass</span>
+            <span class="k">if</span> <span class="s1">&#39;skip&#39;</span> <span class="ow">in</span> <span class="n">tags</span><span class="p">:</span> <span class="c1"># then check for a skip tag; use this to pass on running cells that produce errors</span>
+                <span class="c1"># or to pass on cells that have ellipses (for student answers or alphas, though we&#39;ll remove those tags when </span>
+                <span class="c1"># we make the lastnames file)</span>
+                <span class="k">pass</span>
+            <span class="k">elif</span> <span class="s1">&#39;special-code&#39;</span> <span class="ow">in</span> <span class="n">tags</span><span class="p">:</span>
+                <span class="n">qnum</span> <span class="o">=</span> <span class="p">[</span><span class="n">qs</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="k">for</span> <span class="n">qs</span> <span class="ow">in</span> <span class="n">tags</span> <span class="k">if</span> <span class="n">qs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;a&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">pts</span> <span class="o">=</span>  <span class="nb">int</span><span class="p">([</span><span class="n">ps</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="k">for</span> <span class="n">ps</span> <span class="ow">in</span> <span class="n">tags</span> <span class="k">if</span> <span class="n">ps</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;p&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+                <span class="n">code_string</span> <span class="o">=</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">]</span>
+                <span class="n">grading_instructions</span><span class="p">[</span><span class="n">qnum</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;special-code&#39;</span><span class="p">,</span> <span class="s1">&#39;points&#39;</span><span class="p">:</span> <span class="n">pts</span><span class="p">,</span> <span class="s1">&#39;code_for_credit&#39;</span><span class="p">:</span> <span class="n">code_string</span><span class="p">,</span> <span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="n">code_string</span><span class="p">}</span>
+                <span class="c1"># for special code, run the cells up to and including the cell tagged qxx in the LASTNAMES file and then </span>
+                <span class="c1"># execute the code_for_credit code; then variable credit will have the correct value for the question</span>
+            <span class="k">elif</span> <span class="nb">len</span><span class="p">([</span><span class="n">ass</span> <span class="k">for</span> <span class="n">ass</span> <span class="ow">in</span> <span class="n">tags</span> <span class="k">if</span> <span class="n">ass</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;a&#39;</span><span class="p">])</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span> <span class="c1"># tagged axx</span>
+                <span class="k">if</span> <span class="s1">&#39;_markdown&#39;</span> <span class="ow">in</span> <span class="n">tags</span><span class="p">:</span> <span class="c1"># in this case we want to store the text in the markdown cell as our answer</span>
+                    <span class="n">qnum</span> <span class="o">=</span> <span class="p">[</span><span class="n">qs</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="k">for</span> <span class="n">qs</span> <span class="ow">in</span> <span class="n">tags</span> <span class="k">if</span> <span class="n">qs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;a&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="n">pts</span> <span class="o">=</span>  <span class="nb">int</span><span class="p">([</span><span class="n">ps</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="k">for</span> <span class="n">ps</span> <span class="ow">in</span> <span class="n">tags</span> <span class="k">if</span> <span class="n">ps</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;p&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+                    <span class="n">answer</span> <span class="o">=</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">]</span>
+                    <span class="n">grading_instructions</span><span class="p">[</span><span class="n">qnum</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span> <span class="s1">&#39;points&#39;</span><span class="p">:</span> <span class="n">pts</span><span class="p">,</span> <span class="s1">&#39;answer&#39;</span><span class="p">:</span> <span class="n">answer</span><span class="p">}</span> <span class="c1"># no code for a markdown cell</span>
+                <span class="k">elif</span> <span class="s1">&#39;_stdoutput&#39;</span> <span class="ow">in</span> <span class="n">tags</span><span class="p">:</span> <span class="c1"># in this case we want to compare the mid answer to the output itself</span>
+                    <span class="c1"># get the output format from the tags (this only works for some kinds of output, e.g. print statements)</span>
+                    <span class="n">outformat</span> <span class="o">=</span> <span class="p">[</span><span class="n">of</span><span class="p">[</span><span class="mi">8</span><span class="p">:]</span> <span class="k">for</span> <span class="n">of</span> <span class="ow">in</span> <span class="n">tags</span> <span class="k">if</span> <span class="n">of</span><span class="p">[:</span><span class="mi">8</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;_format:&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="n">answer</span> <span class="o">=</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;outputs&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="n">outformat</span><span class="p">]</span>
+                    <span class="c1"># determine if the text answer needs to be in a different format (e.g. an int or float)</span>
+                    <span class="c1"># if so, then use tag e.g. _newformat:int</span>
+                    <span class="n">newformat</span> <span class="o">=</span> <span class="kc">None</span>
+                    <span class="n">newformatlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">nf</span><span class="p">[</span><span class="mi">11</span><span class="p">:]</span> <span class="k">for</span> <span class="n">nf</span> <span class="ow">in</span> <span class="n">tags</span> <span class="k">if</span> <span class="n">nf</span><span class="p">[:</span><span class="mi">8</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;_newformat:&#39;</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">newformatlist</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+                        <span class="n">newformat</span> <span class="o">=</span> <span class="n">newformatlist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                        <span class="n">answer</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">newformat</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="n">answer</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+                    <span class="n">qnum</span> <span class="o">=</span> <span class="p">[</span><span class="n">qs</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="k">for</span> <span class="n">qs</span> <span class="ow">in</span> <span class="n">tags</span> <span class="k">if</span> <span class="n">qs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;a&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="n">pts</span> <span class="o">=</span>  <span class="nb">int</span><span class="p">([</span><span class="n">ps</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="k">for</span> <span class="n">ps</span> <span class="ow">in</span> <span class="n">tags</span> <span class="k">if</span> <span class="n">ps</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;p&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+                    <span class="n">grading_instructions</span><span class="p">[</span><span class="n">qnum</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;stdoutput&#39;</span><span class="p">,</span> <span class="s1">&#39;points&#39;</span><span class="p">:</span> <span class="n">pts</span><span class="p">,</span> <span class="s1">&#39;outformat&#39;</span><span class="p">:</span> <span class="n">outformat</span><span class="p">,</span> 
+                                                  <span class="s1">&#39;newformat&#39;</span><span class="p">:</span> <span class="n">newformat</span><span class="p">,</span> <span class="s1">&#39;answer&#39;</span><span class="p">:</span> <span class="n">answer</span><span class="p">,</span> <span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">]}</span>
+                <span class="k">elif</span> <span class="s1">&#39;_picture&#39;</span> <span class="ow">in</span> <span class="n">tags</span><span class="p">:</span> <span class="c1"># in this case we want to capture the current figure and save it to the </span>
+                    <span class="c1"># excel spreadsheet</span>
+                    <span class="n">qnum</span> <span class="o">=</span> <span class="p">[</span><span class="n">qs</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="k">for</span> <span class="n">qs</span> <span class="ow">in</span> <span class="n">tags</span> <span class="k">if</span> <span class="n">qs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;a&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="n">pts</span> <span class="o">=</span>  <span class="nb">int</span><span class="p">([</span><span class="n">ps</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="k">for</span> <span class="n">ps</span> <span class="ow">in</span> <span class="n">tags</span> <span class="k">if</span> <span class="n">ps</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;p&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+                    <span class="n">exec</span><span class="p">(</span><span class="n">cell</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">])</span> <span class="c1"># run the answer cell -- producing the figure</span>
+                    <span class="n">cwd</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+                    <span class="n">execstr</span> <span class="o">=</span> <span class="s2">&quot;matplotlib.pyplot.savefig(f&#39;</span><span class="si">{cwd}</span><span class="se">\\\\</span><span class="s2">ans</span><span class="si">{qnum}</span><span class="s2">.png&#39;,pad_inches=0.1,bbox_inches=&#39;tight&#39;)&quot;</span> 
+                    <span class="n">exec</span><span class="p">(</span><span class="n">execstr</span><span class="p">)</span>
+                    <span class="n">grading_instructions</span><span class="p">[</span><span class="n">qnum</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;picture&#39;</span><span class="p">,</span> <span class="s1">&#39;points&#39;</span><span class="p">:</span> <span class="n">pts</span><span class="p">,</span> <span class="s1">&#39;file&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">cwd</span><span class="si">}</span><span class="se">\\\\</span><span class="s1">ans</span><span class="si">{</span><span class="n">qnum</span><span class="si">}</span><span class="s1">.png&#39;</span><span class="p">,</span> 
+                                                  <span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">]}</span>
+                <span class="k">elif</span> <span class="s1">&#39;_var&#39;</span> <span class="ow">in</span> <span class="n">tags</span><span class="p">:</span> <span class="c1"># in this case we want to run code and obtain the variable as our answer</span>
+                    <span class="n">qnum</span> <span class="o">=</span> <span class="p">[</span><span class="n">qs</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="k">for</span> <span class="n">qs</span> <span class="ow">in</span> <span class="n">tags</span> <span class="k">if</span> <span class="n">qs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;a&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="n">pts</span> <span class="o">=</span>  <span class="nb">int</span><span class="p">([</span><span class="n">ps</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="k">for</span> <span class="n">ps</span> <span class="ow">in</span> <span class="n">tags</span> <span class="k">if</span> <span class="n">ps</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;p&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+                    <span class="c1"># get varname from _varname:... tag</span>
+                    <span class="n">varname</span> <span class="o">=</span> <span class="p">[</span><span class="n">vn</span><span class="p">[</span><span class="mi">9</span><span class="p">:]</span> <span class="k">for</span> <span class="n">vn</span> <span class="ow">in</span> <span class="n">tags</span> <span class="k">if</span> <span class="n">vn</span><span class="p">[:</span><span class="mi">9</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;_varname:&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">pre</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;global </span><span class="si">{</span><span class="n">varname</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span>
+                        <span class="n">exec</span><span class="p">(</span><span class="n">pre</span> <span class="o">+</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">],</span><span class="nb">globals</span><span class="p">(),</span><span class="nb">locals</span><span class="p">())</span>
+                        <span class="n">answer</span> <span class="o">=</span> <span class="nb">globals</span><span class="p">()[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">varname</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span>
+                    <span class="k">except</span><span class="p">:</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;FAILED TO EXECUTE CODE DEFINING </span><span class="si">{</span><span class="n">varname</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                        <span class="n">answer</span> <span class="o">=</span> <span class="kc">None</span>
+                    <span class="n">grading_instructions</span><span class="p">[</span><span class="n">qnum</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;var&#39;</span><span class="p">,</span> <span class="s1">&#39;points&#39;</span><span class="p">:</span> <span class="n">pts</span><span class="p">,</span> <span class="s1">&#39;varname&#39;</span><span class="p">:</span> <span class="n">varname</span><span class="p">,</span> <span class="s1">&#39;answer&#39;</span><span class="p">:</span> <span class="n">answer</span><span class="p">,</span> <span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">]}</span>
+            <span class="k">elif</span> <span class="nb">len</span><span class="p">([</span><span class="n">qs</span> <span class="k">for</span> <span class="n">qs</span> <span class="ow">in</span> <span class="n">tags</span> <span class="k">if</span> <span class="n">qs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;q&#39;</span><span class="p">])</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span> <span class="c1"># tagged qxx</span>
+                <span class="k">pass</span>
+            <span class="k">elif</span> <span class="s1">&#39;_alphas&#39;</span> <span class="ow">in</span> <span class="n">tags</span><span class="p">:</span>
+                <span class="k">pass</span>
+            <span class="k">elif</span> <span class="s1">&#39;_date&#39;</span> <span class="ow">in</span> <span class="n">tags</span><span class="p">:</span> 
+                <span class="n">early_date</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+                <span class="n">late_after</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span>
+                <span class="n">exec</span><span class="p">(</span><span class="n">cell</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">],</span><span class="nb">globals</span><span class="p">(),</span><span class="nb">locals</span><span class="p">())</span>
+                <span class="n">early_date</span> <span class="o">=</span> <span class="nb">globals</span><span class="p">()[</span><span class="s1">&#39;early_date&#39;</span><span class="p">]</span>
+                <span class="n">late_after</span> <span class="o">=</span> <span class="nb">globals</span><span class="p">()[</span><span class="s1">&#39;late_after&#39;</span><span class="p">]</span>
+                <span class="n">grading_instructions</span><span class="p">[</span><span class="s1">&#39;dates&#39;</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;early_date&#39;</span><span class="p">:</span> <span class="n">early_date</span><span class="p">,</span> <span class="s1">&#39;late_after&#39;</span><span class="p">:</span> <span class="n">late_after</span><span class="p">}</span>
+            <span class="k">elif</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;cell_type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="c1"># just run the cell</span>
+                <span class="n">exec</span><span class="p">(</span><span class="n">cell</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">],</span><span class="nb">globals</span><span class="p">(),</span><span class="nb">locals</span><span class="p">())</span>
+                
+    <span class="k">return</span> <span class="n">grading_instructions</span>
+
+<span class="k">def</span> <span class="nf">gradeq</span><span class="p">(</span><span class="n">response</span><span class="p">,</span><span class="n">answer</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="o">==</span><span class="nb">type</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mi">3</span><span class="p">)):</span> <span class="c1"># type</span>
+        <span class="k">return</span> <span class="n">values_equal</span><span class="p">(</span><span class="n">response</span><span class="p">,</span><span class="n">answer</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="o">==</span><span class="nb">type</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">):</span> <span class="c1"># string</span>
+        <span class="k">return</span> <span class="n">values_equal</span><span class="p">(</span><span class="n">response</span><span class="p">,</span><span class="n">answer</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="o">==</span><span class="nb">type</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span> <span class="c1"># integer</span>
+        <span class="k">return</span> <span class="n">values_equal</span><span class="p">(</span><span class="n">response</span><span class="p">,</span><span class="n">answer</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="o">==</span><span class="nb">type</span><span class="p">(</span><span class="mf">3.0</span><span class="p">):</span> <span class="c1">#float</span>
+        <span class="k">return</span> <span class="n">values_equal_float</span><span class="p">(</span><span class="n">response</span><span class="p">,</span><span class="n">answer</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">:</span> <span class="c1">#float32</span>
+        <span class="k">return</span> <span class="n">values_equal_float</span><span class="p">(</span><span class="n">response</span><span class="p">,</span><span class="n">answer</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">:</span> <span class="c1">#float64</span>
+        <span class="k">return</span> <span class="n">values_equal_float</span><span class="p">(</span><span class="n">response</span><span class="p">,</span><span class="n">answer</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="o">==</span><span class="nb">type</span><span class="p">([</span><span class="mi">1</span><span class="p">]):</span> <span class="c1">#list</span>
+        <span class="k">return</span> <span class="n">lists_equal</span><span class="p">(</span><span class="n">response</span><span class="p">,</span><span class="n">answer</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="o">==</span><span class="nb">type</span><span class="p">(</span><span class="n">make_array</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)):</span> <span class="c1">#array</span>
+        <span class="k">return</span> <span class="n">arrays_equal</span><span class="p">(</span><span class="n">response</span><span class="p">,</span><span class="n">answer</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="o">==</span><span class="nb">type</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)):</span> <span class="c1">#tuple</span>
+        <span class="k">return</span> <span class="n">arrays_equal</span><span class="p">(</span><span class="n">response</span><span class="p">,</span><span class="n">answer</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="o">==</span><span class="nb">type</span><span class="p">(</span><span class="n">Table</span><span class="p">()):</span> <span class="c1">#table</span>
+        <span class="k">return</span> <span class="n">tables_equal</span><span class="p">(</span><span class="n">response</span><span class="p">,</span><span class="n">answer</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="o">==</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">:</span> <span class="c1">#int64</span>
+        <span class="k">return</span> <span class="n">values_equal</span><span class="p">(</span><span class="n">response</span><span class="p">,</span><span class="n">answer</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="o">==</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">:</span> <span class="c1">#int32</span>
+        <span class="k">return</span> <span class="n">values_equal</span><span class="p">(</span><span class="n">response</span><span class="p">,</span><span class="n">answer</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="o">==</span><span class="n">np</span><span class="o">.</span><span class="n">str_</span><span class="p">:</span> <span class="c1"># a string from a numpy array</span>
+        <span class="k">return</span> <span class="n">values_equal</span><span class="p">(</span><span class="n">response</span><span class="p">,</span><span class="n">answer</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="o">==</span><span class="nb">type</span><span class="p">(</span><span class="kc">True</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">values_equal</span><span class="p">(</span><span class="n">response</span><span class="p">,</span><span class="n">answer</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="o">==</span><span class="n">np</span><span class="o">.</span><span class="n">bool_</span><span class="p">:</span> <span class="c1"># a Boolean in a numpy array</span>
+        <span class="k">return</span> <span class="n">values_equal</span><span class="p">(</span><span class="n">response</span><span class="p">,</span><span class="n">answer</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">values_equal_float</span><span class="p">(</span><span class="n">value0</span><span class="p">,</span><span class="n">value1</span><span class="p">,</span><span class="n">tol</span><span class="o">=</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">8</span><span class="p">)):</span>
+    <span class="sd">&quot;&quot;&quot; return True if the two values are equal up to tol. &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="n">value0</span><span class="o">-</span><span class="n">value1</span><span class="p">)</span><span class="o">&lt;</span><span class="n">tol</span>
+
+<span class="k">def</span> <span class="nf">values_equal</span><span class="p">(</span><span class="n">value0</span><span class="p">,</span><span class="n">value1</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; return True if the two values are equal. Works equally well on strings and numbers.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">value0</span><span class="o">==</span><span class="n">value1</span>
+
+<span class="k">def</span> <span class="nf">lists_equal</span><span class="p">(</span><span class="n">list0</span><span class="p">,</span><span class="n">list1</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Test if two lists have all their elements equal. &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">list0</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">list1</span><span class="p">):</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">list0</span><span class="p">)):</span>  <span class="c1"># loop over all columns and ensure that they are the same</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">value</span> <span class="ow">and</span> <span class="n">gradeq</span><span class="p">(</span><span class="n">list0</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">list1</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">value</span>
+
+<span class="k">def</span> <span class="nf">arrays_equal</span><span class="p">(</span><span class="n">array0</span><span class="p">,</span><span class="n">array1</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Test if two arrays have all their elements equal. &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">array0</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">array1</span><span class="p">):</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">array0</span><span class="p">)):</span>  <span class="c1"># loop over all columns and ensure that they are the same</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">value</span> <span class="ow">and</span> <span class="n">gradeq</span><span class="p">(</span><span class="n">array0</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">array1</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">value</span>
+
+<span class="k">def</span> <span class="nf">tables_equal</span><span class="p">(</span><span class="n">table0</span><span class="p">,</span><span class="n">table1</span><span class="p">,</span><span class="n">row0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">row1</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check if the rows in row0:row1 of two tables are equal. Column labels need not be equal, we check values only.&quot;&quot;&quot;</span>
+    <span class="c1"># subset tables:</span>
+    <span class="k">if</span> <span class="n">row1</span><span class="o">==</span><span class="kc">None</span><span class="p">:</span> <span class="c1"># if no endpoint, go to the end of the table</span>
+        <span class="n">table0</span> <span class="o">=</span> <span class="n">table0</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">row0</span><span class="p">,</span><span class="n">table0</span><span class="o">.</span><span class="n">num_rows</span><span class="p">))</span>
+        <span class="n">table1</span> <span class="o">=</span> <span class="n">table1</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">row0</span><span class="p">,</span><span class="n">table1</span><span class="o">.</span><span class="n">num_rows</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">table0</span> <span class="o">=</span> <span class="n">table0</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">row0</span><span class="p">,</span><span class="n">row1</span><span class="p">))</span>
+        <span class="n">table1</span> <span class="o">=</span> <span class="n">table1</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">row0</span><span class="p">,</span><span class="n">row1</span><span class="p">))</span>
+    <span class="n">r0</span> <span class="o">=</span> <span class="n">table0</span><span class="o">.</span><span class="n">num_rows</span>
+    <span class="n">r1</span> <span class="o">=</span> <span class="n">table1</span><span class="o">.</span><span class="n">num_rows</span>
+    <span class="k">if</span> <span class="n">r0</span> <span class="o">!=</span> <span class="n">r1</span><span class="p">:</span>   <span class="c1"># check the two tables have the same number of rows</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">columns0</span> <span class="o">=</span> <span class="n">table0</span><span class="o">.</span><span class="n">columns</span>
+        <span class="n">columns1</span> <span class="o">=</span> <span class="n">table1</span><span class="o">.</span><span class="n">columns</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">columns0</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">columns1</span><span class="p">):</span> <span class="c1"># check the two tables have the same number of columns</span>
+            <span class="n">values</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">else</span><span class="p">:</span> 
+            <span class="n">value</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">columns0</span><span class="p">)):</span>  <span class="c1"># loop over all columns and ensure that they are the same</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="n">value</span> <span class="ow">and</span> <span class="n">gradeq</span><span class="p">(</span><span class="n">columns0</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">columns1</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">value</span>
+
+<span class="k">def</span> <span class="nf">make_credit_yellow</span><span class="p">():</span>
+    <span class="n">current_working_directory</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+    <span class="n">spreadsheet_file</span> <span class="o">=</span> <span class="n">current_working_directory</span><span class="o">+</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">grading_data.xlsx&#39;</span>
+    <span class="n">wbss</span> <span class="o">=</span> <span class="n">xw</span><span class="o">.</span><span class="n">Book</span><span class="p">(</span><span class="n">spreadsheet_file</span><span class="p">)</span>
+    <span class="n">sht</span> <span class="o">=</span> <span class="n">wbss</span><span class="o">.</span><span class="n">sheets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="c1"># Initialize a blank list of row indices</span>
+    <span class="n">row_idx_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># Create a range starting at A3 and expanding down the entire</span>
+    <span class="c1"># column where there is data</span>
+    <span class="n">my_range</span> <span class="o">=</span> <span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A3&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="s1">&#39;down&#39;</span><span class="p">)</span> 
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">my_range</span><span class="p">)):</span>
+        <span class="c1"># First check to see if the cell contains a :</span>
+        <span class="k">if</span> <span class="s1">&#39;:&#39;</span> <span class="ow">in</span> <span class="n">my_range</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">:</span>
+            <span class="c1"># If the cell contains a : see if credit is after the :</span>
+            <span class="k">if</span> <span class="n">my_range</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;credit&#39;</span><span class="p">:</span>
+                <span class="c1"># Append row index to the list row_idx_list</span>
+                <span class="n">row_idx_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+    <span class="c1"># Now loop over all the rows in row_idx_list</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">row_idx_list</span><span class="p">:</span>
+        <span class="c1"># Set the rows in columns A and B to yellow if the</span>
+        <span class="c1"># cell is a credit cell.  Note the plus 3 because</span>
+        <span class="c1"># we technically start in row 3, but row_idx_list</span>
+        <span class="c1"># starts with a zero index.</span>
+        <span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;A</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">3</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;B</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">3</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+        <span class="c1"># Do the same thing for column C, but now expand it</span>
+        <span class="c1"># to the right to get ALL student submission rows to</span>
+        <span class="c1"># be yellow as well.</span>
+        <span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;C</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">3</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="s1">&#39;right&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>        
+
+<span class="n">seal_grader</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Making all the credit rows yellow.&quot;</span><span class="p">)</span>
+<span class="n">make_credit_yellow</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\anaconda3\lib\site-packages\statsmodels\compat\pandas.py:49: FutureWarning: The Panel class is removed from pandas. Accessing it from the top-level namespace will also be removed in the next version
+  data_klasses = (pandas.Series, pandas.DataFrame, pandas.Panel)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The 50th percentile is 64021 and the 99th percentile is 470614.
+Setting up spreadsheet: Question 1
+Setting up spreadsheet: Question 2
+Setting up spreadsheet: Question 3
+Setting up spreadsheet: Question 4
+Setting up spreadsheet: Question 5
+Setting up spreadsheet: Question 6
+Setting up spreadsheet: Question 7
+Setting up spreadsheet: Question 8
+Setting up spreadsheet: Question 9
+Setting up spreadsheet: Question 10
+Getting responses from Lab 00_m220000_attempt_2020-04-06-14-56-59_lab00--2021--TRAVES.ipynb.
+Processing submission by MIDN in [220000]
+The 50th percentile is 64021 and the 99th percentile is 470614.
+[220000]
+Making all the credit rows yellow.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="s1">&#39;JASMINE-COX, [23,24]&#39;</span>
+<span class="n">file</span><span class="p">[</span><span class="n">file</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span><span class="o">+</span><span class="mi">2</span><span class="p">:]</span>
+<span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">subm</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">[</span><span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">subm</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span><span class="o">+</span><span class="mi">2</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;[23,24]&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># replace ... below with the file address of the gradebook where you&#39;ll write the grades (file 6 in the instructions)</span>
+<span class="n">tally_points</span><span class="p">(</span><span class="s2">&quot;Gradebook Section 4002.xlsx&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gathering grading data.
+Tallying grades on grading document.
+Printing grades to spreadsheet.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="appendix-setting-up-an-assignment">
+<h1>Appendix: Setting up an Assignment<a class="headerlink" href="#appendix-setting-up-an-assignment" title="Permalink to this headline">¶</a></h1>
+<p>In this appendix, I’ll explain how to set up an assignment for use with the autograder. I assume that your assignment roughly follows the examples from SM219 in Spring 2020. Most importantly, your assignment is in an ipynb file with
+LASTNAMES in the file name (for the student version) and SOLUTIONS in the ipynb file containing the solutions.</p>
+<p>When making the SOLUTIONS file, I always write the cell that I’ll ask the midshipmen to complete (often
+pre-filled with some code and … for places they need to add code). I then follow that cell with a similar cell containing my solution. Sometimes we sandwich a third cell between these two cells, as explained below.</p>
+<p>In any case, we add <em>tags</em> to each of these cells (and some others). To add tags, click on View and select Cell Toolbar. Then select Tags. When the cell collects the midshipmen’s alpha codes, we tag it with _alphas (that is the underscore followed by alphas). That cell should look like:</p>
+<div class="cell tag__alphas docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">global</span> <span class="n">alphas</span> <span class="c1"># leave this line alone but replace the ... in the following line with your alpha numbers</span>
+<span class="n">alphas</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>I always include a cell tagged _date with the early date (if midshipmen turn in the assignment by 2359 on the early date then they earn 1 bonus point) and the due date (called late_after). If midshipmen turn in the assignment past 2359 on that date they lose 25% of the points they earned. Dates are recorded as (month, day) so that Jan 15 is (1,15). Here’s an example:</p>
+<div class="cell tag__date docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">global</span> <span class="n">early_date</span>
+<span class="k">global</span> <span class="n">late_after</span>
+<span class="n">early_date</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">late_after</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">17</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Some cells should be skipped by the autograder. For example, the cells might deliberately produce an error (e.g. to show midshipmen the way to read the error message). Such cells should not be executed by the autograder. We tag those cells with the skip tag.</p>
+<p>Cells containing the code that should be evaluated to assess the student answer (usually a code cell with …’s) should be tagged qx or qxx, where x or xx stands for the question number. For some reason I always start the question numbering at 1 though I really ought to start at 0 to obey our Python overlords.</p>
+<p>Cells with answers should be tagged ax or axx (with x or xx giving the question number). They should also be tagged px and pxx (with the x or xx giving the number of points the answer is worth). Furthermore, the cell should have an additional tag.
+Use _markdown if the answer is a markdown cell (e.g. edit a markdown cell to make an answer). Use _stdoutput and _format:text if the answer is given by the (text) output of the answer cell. the _format:xx tag is used to show the format of the output but you can use the _newformat:xx tag to give another format you want the answer in (e.g. int from a string answer). Use _picture if the answer is a picture produced by the cell’s code (e.g. a histogram). Use _var and _varname:xx (where xx is a variable name) if the answer is the value of variable xx after running the answer cell’s code. [Currently we can only track one variable per cell and we need both the _var and _varname:xx tags; it would be better to just have to use the _varname:xx tag.]</p>
+<p>Sometimes there is a variable produced in one cell that you want to use in another cell but not a variable that is being checked using a _var tag. In that case, use a _track:varname tag, where varname is the variable name you’d like to continue to store. This is particularly usefull in cells where we load a table for later use. You need to put this tag on both the qxx and axx cells if you need to track in both the student answers and solutions (as you usually do).</p>
+<p>Sometimes we need to give special instructions on how to grade a question. For example, we might want to give partial credit or we might want to look in an unusual place for the answer (e.g. looking at two different variable values or using code spread out over two different cells). In this case, we sandwich a code cell between the question cell and the answer cell with the tag special-code. That cell should contain the code <em>global credit</em> and the credit variable should be assigned in the cell. You can use cell_num to refer to the current cell (the cell tagged qxx) and cell_num-1 to refer to the previous cell, etc. In accessing portions of the cells, you’ll probably want to know how the cell’s code appears when it is being read by the seal_grader program. The program uses the nbformat library. Use the following code to print out the 11th cell in the file “SOLUTIONS.ipynb”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nbformat</span>
+<span class="n">my_notebook</span> <span class="o">=</span> <span class="n">nbformat</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;.</span><span class="se">\\</span><span class="s2">LAB09 - SOLUTIONS.ipynb&quot;</span><span class="p">,</span> <span class="n">as_version</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_notebook</span><span class="o">.</span><span class="n">cells</span><span class="p">[</span><span class="mi">18</span><span class="p">][</span><span class="s1">&#39;source&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.random.seed(202038) # leave this line alone
+
+# We replace each predictor value with its corresponding value in standard units
+movements_SU = Table()
+for i in np.arange(movements.num_columns):
+    x = movements.column(i)
+    x = (x-np.mean(x))/np.std(x)
+    movements_SU = movements_SU.with_column(movements.labels[i],x)
+movements_SU = movements_SU.with_column(&quot;Class&quot;,movements.column(&quot;Class&quot;))
+
+# now we shuffle the rows
+movements_shuffled = movements_SU.sample(with_replacement=False) # Replace with appropriate choice of True or False
+
+movements_shuffled.take(959)
+</pre></div>
+</div>
+</div>
+</div>
+<p>After tagging all cells, I make a copy of the SOLUTIONS file and rename it LASTNAME. In the LASTNAME file I cut all the cells with special instructions or answers to the questions. I also cut the date cell and clear all output. Then hide tags and save the file for the midshipmen.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Day 02/Lab 00/Testing"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Prof. Will Traves<br/>
+        
+            &copy; Copyright None.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
